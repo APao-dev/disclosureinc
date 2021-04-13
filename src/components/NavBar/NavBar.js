@@ -4,12 +4,17 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 // Para la lista desplegable con las opciones
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
+// Intentando agregar la cartWidget al navBar
+// Icono carrito
+
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+// import CartWidget from './components/CartWidget/CartWidget';
+// Importando el CSS
+import './NavBar.css'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -23,8 +28,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
-
-
 
 export default function ButtonAppBar() {
   const classes = useStyles();
@@ -42,21 +45,22 @@ export default function ButtonAppBar() {
 
 
   return (
+    
     <div className={classes.root}>
+     
       <AppBar position="static" >
+        
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" >
-            <MenuIcon />
-          </IconButton>
-
-    
-    
+          
+                
           <Typography variant="h3" className={classes.title}>
             DisclosureInc
           </Typography>
 
+          <ShoppingCartOutlinedIcon  className="shopping-car"/> 
+      
           <div>
-        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+        <Button className="boton-menu" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
         Open Menu
       </Button>
           <Menu
@@ -72,11 +76,9 @@ export default function ButtonAppBar() {
          
     </div>
 
-
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </div>
   );
-}
-
+  }
