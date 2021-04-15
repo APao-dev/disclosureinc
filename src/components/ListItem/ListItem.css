@@ -1,0 +1,41 @@
+
+
+h1{
+    color: rgba(255, 0, 225, 0.913);
+    font-size: 1.6rem;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding: 20px;
+    margin: 20px auto;
+}
+.container-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120px;
+    width: 70%;
+    padding: 20px;
+   
+}
+.container-form__input{
+    padding: 30px;
+    margin: 10px auto;
+    width: 80%;
+}
+.container-form__button{
+    padding: 10px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: rgba(42, 149, 215, 0.913);
+ 
+}
+
+
+
