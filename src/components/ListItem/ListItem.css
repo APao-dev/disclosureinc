@@ -17,23 +17,28 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 120px;
-    width: 70%;
+    height: 100px;
+    width: 80%;
     padding: 20px;
    
 }
 .container-form__input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 30px;
     margin: 10px auto;
     width: 80%;
 }
 .container-form__button{
     padding: 10px;
-    width: 25%;
-    display: flex;
-    justify-content: center;
+    width: 20%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
     color: white;
-    background-color: rgba(42, 149, 215, 0.913);
+    background-color: rgba(108, 42, 215, 0.837);
  
 }
 

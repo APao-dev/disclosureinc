@@ -3,7 +3,9 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 // import Visualizer from './components/Visualizer/Visualizer'
 // import CartWidget from './components/CartWidget/CartWidget'
-import ListItemContainer from './components/ListItemContainer/ListItemContainer'
+import ListItemContainer from './containers/ListItemContainer/ListItemContainer'
+
+import ItemCountContainer from './containers/ItemCountContainer/ItemCountContainer';
 
 class App extends React.Component {
 
@@ -20,6 +22,8 @@ class App extends React.Component {
             <NavBar/>
         
             <ListItemContainer />
+
+           <ItemCountContainer/>
             
             </div>
             

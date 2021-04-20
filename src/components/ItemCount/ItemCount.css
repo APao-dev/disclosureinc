@@ -1,0 +1,14 @@
+p{
+    color: teal;
+    font-size: 1.4em;
+}
+.button-count{
+    background-color: rgba(157, 227, 232, 0.693);
+    padding: 8px;
+    margin: 10px ;
+    width: 6%;
+    font-size: 1.2em;
+    border: steelblue solid 1px;
+    border-radius: 2px;
+
+}

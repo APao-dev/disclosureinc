@@ -56,9 +56,9 @@ export default function ButtonAppBar() {
           <Typography variant="h3" className={classes.title}>
             DisclosureInc
           </Typography>
-
+         
           <ShoppingCartOutlinedIcon  className="shopping-car"/> 
-      
+         
           <div>
         <Button className="boton-menu" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
         Open Menu
