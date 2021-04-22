@@ -1,34 +1,45 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-// import Visualizer from './components/Visualizer/Visualizer'
-// import CartWidget from './components/CartWidget/CartWidget'
-import ListItemContainer from './containers/ListItemContainer/ListItemContainer'
+// import Item from './components/Item/Item';
+// import ListItemContainer from './containers/ListItemContainer/ListItemContainer'
 
 import ItemCountContainer from './containers/ItemCountContainer/ItemCountContainer';
 
-class App extends React.Component {
 
-    // constructor(props) {
-    //     super(props);
+function App() {
+
+    return(
+        <div>
+        <NavBar/>
+    
+       
         
-    // }
+       <ItemCountContainer/>
+        
+        </div>
+        
+    )
+} 
+// class App extends React.Component {
+
+    
 
 
-    render() {   
-        return ( 
+//     render() {   
+//         return ( 
           
-            <div>
-            <NavBar/>
+//             <div>
+//             <NavBar/>
         
-            <ListItemContainer />
-
-           <ItemCountContainer/>
+//             <ListItemContainer />
             
-            </div>
+//            <ItemCountContainer/>
             
-        );
-    }
-}
+//             </div>
+            
+//         );
+//     }
+// }
 
-export default App;
+ export default App;

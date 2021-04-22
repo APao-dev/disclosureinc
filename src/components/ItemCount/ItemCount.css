@@ -4,11 +4,17 @@ p{
 }
 .button-count{
     background-color: rgba(157, 227, 232, 0.693);
-    padding: 8px;
-    margin: 10px ;
-    width: 6%;
+    padding: 6px;
+    margin: 4px ;
+    width: 5%;
     font-size: 1.2em;
     border: steelblue solid 1px;
     border-radius: 2px;
 
+}
+.button-add{
+    background-color: rgba(75, 160, 245, 0.844);
+    padding: 10px;
+    margin: 12px;
+    
 }

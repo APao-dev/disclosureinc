@@ -3,9 +3,9 @@ import ItemCount from '../../components/ItemCount/ItemCount';
 
 
 
-export default function ItemCountContainer(props){
+export default function ItemCountContainer(){
 
-    const[number, setNumber] = useState(0);
+    const[number, setNumber] = useState(1);
 
     useEffect(() => {
         console.log('ComponentDidMount desde useEffect');
@@ -13,11 +13,22 @@ export default function ItemCountContainer(props){
 
 
     function onIncrement() {
-        setNumber(number + 1);
+        if(number < 5){
+          setNumber(number + 1);  
+        }else{
+            alert('No hay más stock')
+        }
+        
     }
 
     function onDecrement() {
-        setNumber(number - 1);
+        if(number > 1){
+         setNumber(number - 1);   
+        }else{
+            alert('Debes agregar un item')
+        }
+        
+        
     }
    
 
@@ -25,11 +36,10 @@ export default function ItemCountContainer(props){
          
         return(
             <div>
-             {
-                 number < 5 ? <ItemCount number={number} increment={onIncrement} decrement={onDecrement}/> :null
-             }
-               
-
+                
+                <ItemCount number={number} increment={onIncrement} decrement={onDecrement}/> 
+            
+            
             </div>
         )
 }
