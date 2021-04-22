@@ -1,20 +1,21 @@
+
+/* .count{
+    display: flex;
+    flex-direction: column;
+} */
 p{
-    color: teal;
-    font-size: 1.4em;
+    color: rgb(25, 187, 187);
+    font-size: 1.3rem;
+    margin: 6px;
+    
 }
 .button-count{
-    background-color: rgba(157, 227, 232, 0.693);
-    padding: 6px;
-    margin: 4px ;
-    width: 5%;
-    font-size: 1.2em;
-    border: steelblue solid 1px;
+    background-color: rgba(25, 187, 187, 0.933);
+    padding: 10px;
+    margin: 13px ;
+    width: 30%;
+    font-size: 1em;
+    border: rgb(20, 109, 182) solid 1px;
     border-radius: 2px;
 
-}
-.button-add{
-    background-color: rgba(75, 160, 245, 0.844);
-    padding: 10px;
-    margin: 12px;
-    
 }

@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import ItemCount from '../../components/ItemCount/ItemCount';
 
 
-
 export default function ItemCountContainer(){
 
-    const[number, setNumber] = useState(1);
+    const[number, setNumber] = useState(0);
 
     useEffect(() => {
         console.log('ComponentDidMount desde useEffect');
