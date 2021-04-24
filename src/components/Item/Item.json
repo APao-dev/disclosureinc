@@ -2,27 +2,35 @@
     {
         "id": 1,
         "title": "Sweater",
-        "description": "Sweater blanco de mujer"
+        "description": "Sweater blanco de mujer",
+        "details":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates ullam earum consequatur optio debitis",
+        "price": 222
        
     },
 
     {
         "id": 2,
         "title": "Abrigadísimo",
-        "description": "Otro sweater para este invierno"
+        "description": "Otro sweater para este invierno",
+        "details": "commodi numquam dolor labore aliquam tempora eius laudantium quam quaerat quo veniam blanditiis animi. Excepturi",
+        "price": 333
       
     },
 
     {
         "id": 3,
         "title": "Sweater para la noche",
-        "description": "Sweater negro de mujer"
+        "description": "Sweater negro de mujer",
+        "details":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates ullam earum consequatur",
+        "price": 555
       
     },
     {
         "id": 4,
         "title": "Sweater colorido",
-        "description": "Ideal de día"
+        "description": "Ideal de día",
+        "details": "Impedit, voluptates ullam earum consequatur optio debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":"1000"
        
     }
 ]
