@@ -11,7 +11,6 @@ export default class ItemCount extends React.Component {
             <button className="button-count" onClick={this.props.decrement}> - </button>
             <button className="button-count" onClick={this.props.increment}> + </button> <br></br>
 
-            {/* <button className="button-add">Agregar al carrito</button> */}
             <Button size="small" color="primary">
             Agregar al carrito
            </Button>

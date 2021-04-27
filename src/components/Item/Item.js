@@ -14,15 +14,15 @@ import ItemCountContainer from '../../containers/ItemCountContainer/ItemCountCon
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    margin: 30,
-    
-   
+    margin: 20,
+       
   },
   media: {
-    height: 340,
+    width: 250,  
+    height: 300,
     padding: 20,
     margin: 10,
-    
+   
   },
 });
 

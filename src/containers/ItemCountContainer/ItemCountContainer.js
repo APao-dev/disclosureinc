@@ -34,7 +34,7 @@ export default function ItemCountContainer(){
    
          
         return(
-            <div>
+            <div style={{}}>
                 
                 <ItemCount number={number} increment={onIncrement} decrement={onDecrement}/> 
             

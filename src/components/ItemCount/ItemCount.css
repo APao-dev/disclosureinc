@@ -1,8 +1,9 @@
 
-/* .count{
-    display: flex;
-    flex-direction: column;
-} */
+.count{
+    /* display: flex;
+    flex-direction: row; */
+    /* justify-content: center; */
+}
 p{
     color: rgb(25, 187, 187);
     font-size: 1.3rem;
