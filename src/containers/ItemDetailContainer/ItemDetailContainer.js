@@ -19,7 +19,7 @@ export default function ShowItemDetailContainer() {
     // const {itemId} = useParams();
 
     return (
-        <div className="itemDetailContainer">
+        <div  className="itemDetailContainer">
             <ItemDetail arrayProducts={itemDetail}/>
         </div>
     )

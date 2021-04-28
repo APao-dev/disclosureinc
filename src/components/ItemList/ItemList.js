@@ -5,12 +5,14 @@ import Item from '../Item/Item';
 
 export default function ItemList({ItemData}) {
     return (
-        <div>
+        <div style={{display: "flex"}} className="itemlistcontainer">
             
                 {
                     ItemData.map((post) => {
                         return(
+                            
                             <Item key={post.id} title={post.title} image={post.image} />
+                           
                         )
                     })
                 }
@@ -22,3 +24,34 @@ export default function ItemList({ItemData}) {
 
 
 
+// const ItemList=[
+//     {
+//         "id": 1,
+//         "title": "Sweater",
+//         "description": "Sweater blanco de mujer",
+       
+//     },
+
+//     {
+//         "id": 2,
+//         "title": "Abrigadísimo",
+//         "description": "Otro sweater para este invierno",
+      
+//     },
+
+//     {
+//         "id": 3,
+//         "title": "Sweater para la noche",
+//         "description": "Sweater negro de mujer",
+      
+//     },
+//     {
+//         "id": 4,
+//         "title": "Sweater colorido",
+//         "description": "Ideal de día",
+       
+//     }
+// ]
+// module.exports={
+//     ItemList
+// }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import Item from '../../components/Item/Item';
+// import Item from '../../components/Item/Item';
 import ItemList from "../../components/ItemList/ItemList";
 
 
@@ -10,19 +10,22 @@ export default function ItemListContainer() {
 
     useEffect(() => {
         setTimeout(() => {
-        setItem(ItemList)
-        
+            fetch('https://raw.githubusercontent.com/APao-dev/disclosureinc/main/src/components/Item/Item.json')
+            .then(response => response.json())           
+            .then((data) => {
+                setItem(data)
+            })        
             
         },2000)
         
     }, []);
 
     return(
-        <div style={{display: "flex"}}>
+        <div>
             {
-                item.map(singleItem => (
-                    <Item title={singleItem.title} description={singleItem.description}/>
-                ))
+               <div style={{display: "flex"}}>
+                    <ItemList ItemData={item}/>
+                </div>
             }
         </div>
     )

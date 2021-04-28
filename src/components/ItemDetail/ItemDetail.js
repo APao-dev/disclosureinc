@@ -8,7 +8,7 @@ export default function ItemDetail({arrayProducts}) {
     return( 
     
        <div><h2>Descripción del producto</h2>
-        <div>
+        <div style={{display: "flex"}}>
            
             {
              arrayProducts.map((eachItem) => (
