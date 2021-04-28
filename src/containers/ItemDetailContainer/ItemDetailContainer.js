@@ -26,22 +26,3 @@ export default function ShowItemDetailContainer() {
 }
 
 
-// import React, { useEffect, useState } from 'react';
-// import { useParams } from 'react-router-dom';
-// const { getPostById }= require('../../services/post.service');
-// export default function PostDetailContainer() {
-//     const { postId }= useParams();
-//     const[post, setPost] = useState({title: '', body: ''})
-
-//     useEffect(() => {
-//         getPostById(postId)
-//         .then(res => setPost(res))
-//     },[postId])
-
-//     return(
-//         <div>
-//         {/* <h1>Título: {postId} </h1> */}
-//         <h4></h4>
-//         </div>
-//     )
-// }
