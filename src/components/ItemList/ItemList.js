@@ -11,7 +11,7 @@ export default function ItemList({ItemData}) {
                     ItemData.map((post) => {
                         return(
                             
-                            <Item key={post.id} title={post.title} image={post.image} />
+                            <Item key={post.id} title={post.title} image={post.image}/>
                            
                         )
                     })

@@ -2,5 +2,13 @@
     padding: 30px;
     margin: 10px;
     font-size: 40px;
-    color: hotpink;
+    color: #8785a2;
+}
+#root{
+    background-color: #ffe2e2ee;
+
+}
+.navbar-style{
+    background-color: #ffc7c7;
+    padding: 12px;
 }

@@ -5,10 +5,10 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import Img from '../../assets/img/picture1.png';
+import Img from '../../assets/img/sw6.jpeg';
 import ItemCountContainer from '../../containers/ItemCountContainer/ItemCountContainer';
 
 const useStyles = makeStyles({
@@ -26,7 +26,8 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard({title, description, image}) {
+export default function MediaCard({title, description, image, id, handleClick}) {
+  
   const classes = useStyles();
 
   return (
@@ -36,6 +37,7 @@ export default function MediaCard({title, description, image}) {
           className={classes.media}
           image={Img}
           title={title}
+          description={description}
 
         />
         <CardContent>
@@ -48,9 +50,10 @@ export default function MediaCard({title, description, image}) {
         </CardContent>
       </CardActionArea>
       <CardActions>
+        
       
         <ItemCountContainer/>
-        
+        <Button onClick={() => handleClick(id)} style={{padding:"18px", color:"#ffc7c7", border:"#8785a2 solid 1px"}}>Ver más</Button>
        
       </CardActions>
       

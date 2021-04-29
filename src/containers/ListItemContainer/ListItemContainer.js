@@ -9,14 +9,11 @@ export default function ItemListContainer() {
     const[item, setItem] = useState([])
 
     useEffect(() => {
-        setTimeout(() => {
             fetch('https://raw.githubusercontent.com/APao-dev/disclosureinc/main/src/components/Item/Item.json')
             .then(response => response.json())           
             .then((data) => {
                 setItem(data)
             })        
-            
-        },2000)
         
     }, []);
 
@@ -31,3 +28,30 @@ export default function ItemListContainer() {
     )
 
 }
+
+
+
+// export default function ItemListContainer() {
+
+//     const[item, setItem] = useState([])
+
+//     useEffect(() => {
+//             fetch('https://raw.githubusercontent.com/APao-dev/disclosureinc/main/src/components/Item/Item.json')
+//             .then(response => response.json())           
+//             .then((data) => {
+//                 setItem(data)
+//             })        
+        
+//     }, []);
+
+//     return(
+//         <div>
+//             {
+//                <div style={{display: "flex"}}>
+//                     <ItemList ItemData={item}/>
+//                 </div>
+//             }
+//         </div>
+//     )
+
+// }

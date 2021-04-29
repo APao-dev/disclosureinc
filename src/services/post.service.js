@@ -6,6 +6,7 @@ const getProducts = new Promise((resolve, reject) => {
     .then(data => resolve(data))
     .catch(err => reject(err))
 })
+
 module.exports ={
     getProducts
 }

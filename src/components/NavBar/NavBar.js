@@ -46,11 +46,11 @@ export default function ButtonAppBar() {
 
   return (
     
-    <div className={classes.root}>
+    <div className={classes.root} >
      
       <AppBar position="static" >
         
-        <Toolbar>
+        <Toolbar className="navbar-style">
           
                 
           <Typography variant="h3" className={classes.title}>
