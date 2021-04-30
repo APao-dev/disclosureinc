@@ -46,7 +46,7 @@ export default function MediaCard({title, description, image, categorie, price})
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
            {title}
-           {categorie}
+           
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
            {description}
@@ -58,7 +58,7 @@ export default function MediaCard({title, description, image, categorie, price})
         
       
         <ItemCountContainer/>
-        <Button onClick={() => history.push("/item/")} style={{padding:"18px", color:"#ffc7c7", border:"#8785a2 solid 1px"}}>Ver más</Button>
+        <Button onClick={() => history.push("/item/product.id")} style={{padding:"18px", color:"#ffc7c7", border:"#8785a2 solid 1px"}}>Ver más</Button>
        
       </CardActions>
       

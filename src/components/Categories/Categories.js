@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router-dom';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   categories: {
     display: 'flex',
     width: '300px',
@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
+  
 }));
 
 export default function Categories() {
@@ -23,7 +24,7 @@ export default function Categories() {
 
   return(
     <div className={classes.categories}>
-    <Button onClick={() => history.push("/categories/sweaters")} color="inherit">Sweaters</Button>
+    <Button onClick={() => history.push("/posts/categoryId")} color="inherit">Sweaters</Button>
     <Button color="inherit">Calzado</Button>
     <Button color="inherit">Accesorios</Button>
   </div>

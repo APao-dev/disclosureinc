@@ -7,6 +7,7 @@ import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailCont
 import HomePageContainer from './containers/homePage/HomePageContainer';
 import ContactContainer from './containers/Contact/ContactContainer';
 import Categories from './components/Categories/Categories';
+
 // import PostPageContainer from './containers/postsPage/PostsPageContainer';
 // import { RestaurantMenuRounded } from '@material-ui/icons';
 
@@ -27,16 +28,17 @@ function App() {
          </Route>
               
 
-         <Route path="/posts">
-         <ListItemContainer/> 
+         <Route exact path="/posts">
+         <ListItemContainer/>       
          </Route>
 
          <Route path="/contact">
          <ContactContainer/> 
          </Route>
 
-         <Route path="/categories/sweaters">
+         <Route path="/posts/:categoryId">  
          <Categories/> 
+         <ItemDetailContainer/>
          </Route>
 
          <Route path="/item/:id">
