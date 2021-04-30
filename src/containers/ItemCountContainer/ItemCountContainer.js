@@ -7,7 +7,7 @@ export default function ItemCountContainer(){
     const[number, setNumber] = useState(0);
 
     useEffect(() => {
-        console.log('ComponentDidMount desde useEffect');
+        
     }, [number]);
 
 

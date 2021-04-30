@@ -15,7 +15,7 @@ export default function ShowItemDetailContainer() {
             // filtrar
             .then(data=> {
                 const idPars = parseInt(id)
-                const filtro = data.filter(product => product.id === idPars)
+                const filtro = data.filter(item => item.id === idPars)
                 setItemDetail(filtro[0]) 
                 console.log(filtro)
             }
