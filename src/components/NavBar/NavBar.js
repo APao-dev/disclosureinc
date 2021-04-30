@@ -7,12 +7,10 @@ import Button from '@material-ui/core/Button';
 // Para la lista desplegable con las opciones
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-
-// Intentando agregar la cartWidget al navBar
-// Icono carrito
-
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-// import CartWidget from './components/CartWidget/CartWidget';
+import Categories from '../Categories/Categories';
+import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 // Importando el CSS
 import './NavBar.css'
 
@@ -31,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ButtonAppBar() {
   const classes = useStyles();
-
+  const history =useHistory();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -53,26 +51,27 @@ export default function ButtonAppBar() {
         <Toolbar className="navbar-style">
           
                 
-          <Typography variant="h3" className={classes.title}>
-            DisclosureInc
+          <Typography variant="h3" className={classes.title} >
+            <Link to="/">DisclosureInc</Link>
           </Typography>
-         
+          <Categories />
           <ShoppingCartOutlinedIcon  className="shopping-car"/> 
          
           <div>
         <Button className="boton-menu" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
         Open Menu
       </Button>
+      
           <Menu
         id="simple-menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
-      >   
-      <MenuItem onClick={handleClose}>Productos</MenuItem>
-      <MenuItem onClick={handleClose}>Servicios</MenuItem>
-      <MenuItem onClick={handleClose}>Sobre Nosotros</MenuItem></Menu>
+      > 
+      
+      <MenuItem onClick={() => history.push("/posts")}>Todos los Productos</MenuItem>
+      <MenuItem onClick={() => history.push("/contact")}>Sobre Nosotros</MenuItem></Menu>
          
     </div>
 

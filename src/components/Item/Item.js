@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 
 import Img from '../../assets/img/sw6.jpeg';
 import ItemCountContainer from '../../containers/ItemCountContainer/ItemCountContainer';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -26,9 +27,10 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard({title, description, image, id, handleClick}) {
+export default function MediaCard({title, description, image, categorie, price}) {
   
   const classes = useStyles();
+  const history =useHistory();
 
   return (
     <Card className={classes.root}>
@@ -38,14 +40,17 @@ export default function MediaCard({title, description, image, id, handleClick}) 
           image={Img}
           title={title}
           description={description}
+          categorie={categorie}
 
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
            {title}
+           {categorie}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
            {description}
+           {price}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -53,7 +58,7 @@ export default function MediaCard({title, description, image, id, handleClick}) 
         
       
         <ItemCountContainer/>
-        <Button onClick={() => handleClick(id)} style={{padding:"18px", color:"#ffc7c7", border:"#8785a2 solid 1px"}}>Ver más</Button>
+        <Button onClick={() => history.push("/item/")} style={{padding:"18px", color:"#ffc7c7", border:"#8785a2 solid 1px"}}>Ver más</Button>
        
       </CardActions>
       

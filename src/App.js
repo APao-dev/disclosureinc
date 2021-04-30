@@ -1,12 +1,13 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import ListItemContainer from './containers/ListItemContainer/ListItemContainer';
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
-// import HomePageContainer from './containers/homePage/HomePageContainer';
+import HomePageContainer from './containers/homePage/HomePageContainer';
+import ContactContainer from './containers/Contact/ContactContainer';
+import Categories from './components/Categories/Categories';
 // import PostPageContainer from './containers/postsPage/PostsPageContainer';
-// import ServicesPageContainer from './containers/servicesPage/ServicesPageContainer';
 // import { RestaurantMenuRounded } from '@material-ui/icons';
 
 
@@ -17,40 +18,37 @@ function App() {
 
     return(
         <div>
+            <Router>
             <NavBar/>  
-            <ListItemContainer/>   
-            <ItemDetailContainer/>
+              
+            <Switch>
+        <Route exact path="/">
+         <HomePageContainer/>
+         </Route>
+              
+
+         <Route path="/posts">
+         <ListItemContainer/> 
+         </Route>
+
+         <Route path="/contact">
+         <ContactContainer/> 
+         </Route>
+
+         <Route path="/categories/sweaters">
+         <Categories/> 
+         </Route>
+
+         <Route path="/item/:id">
+         <ItemDetailContainer/>
+         </Route>
+
+       </Switch>
+       </Router>
         </div>
 
     )
 
-//     return(
-//         <Router>
-//         <Container disableGutters maxWidth={false}>
-//         <CssBaseline/>
-//          <NavBar/>  
-//         <ListItemContainer/>   
-//         </Container>
-        
-//       <Switch>
-//         <Route exact path="/">
-//         <HomePageContainer/>
-//         </Route>
-              
-          
-//         <Route exact path="/posts/postId">
-//         <PostDetailContainer />
-//         </Route>
-
-//         <Route path="/services">
-//         <ServicesPageContainer/>
-//         </Route>
-
-//       </Switch>
-        
-       
-//         </Router>
-//     )
 } 
 
  export default App;
