@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "categorie": "Sweater",
         "title": "Sweater blanco de mujer",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates ullam earum consequatur optio debitis",
         "price": "$ 222",
@@ -12,6 +13,7 @@
     {
         "id": 2,
         "title": "Abrigadísimo",
+        "categorie": "Sweater",
         "description": "Otro sweater para este invierno... commodi numquam dolor labore aliquam tempora eius laudantium quam quaerat quo veniam blanditiis animi. Excepturi",
         "price": "$ 333",
         "image":""
@@ -20,18 +22,40 @@
 
     {
         "id": 3,
-        "title": "Sweater para la noche",
+        "categorie": "Calzado",
+        "title": "Zapatos",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates ullam earum consequatur",
-        "price": "$ 555",
+        "price": "$ 3500",
         "image":""
       
     },
     {
         "id": 4,
-        "title": "Sweater colorido",
+        "categorie": "Calzado",
+        "title": "Sandalias",
         "description": "Impedit, voluptates ullam earum consequatur optio debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         "price":"$ 1000",
         "image":""
+       
+    }
+    {
+        "id": 5,
+        "categorie": "Accesorios",
+        "title": "Bufandas",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates ullam earum consequatur optio debitis",
+        "price": "$ 222",
+        "image":""
+
+       
+    },
+    {
+        "id": 6,
+        "categorie": "Accesorios",
+        "title": "Pulseras",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates ullam earum consequatur optio debitis",
+        "price": "$ 222",
+        "image":""
+
        
     }
 ]
