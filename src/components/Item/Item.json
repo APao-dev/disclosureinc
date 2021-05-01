@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "categorie": "Sweaters",
+        "categorie": "sweaters",
         "title": "Sweater blanco de mujer",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates ullam earum consequatur optio debitis",
         "price": "$ 222",
@@ -11,7 +11,7 @@
     },
 
     {
-        "id": 2,"categorie": "Sweaters",
+        "id": 2,"categorie": "sweaters",
         "title": "Abrigadísimo",
         "description": "Otro sweater para este invierno... commodi numquam dolor labore aliquam tempora eius laudantium quam quaerat quo veniam blanditiis animi. Excepturi",
         "price": "$ 333",
@@ -21,7 +21,7 @@
 
     {
         "id": 3,
-        "categorie": "Sweaters",
+        "categorie": "sweaters",
         "title": "Sweater para la noche",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates ullam earum consequatur",
         "price": "$ 555",
@@ -30,7 +30,7 @@
     },
     {
         "id": 4,
-        "categorie": "Calzado",
+        "categorie": "calzado",
         "title": "Botas de cuero",
         "description": "Impedit, voluptates ullam earum consequatur optio debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         "price":"$ 5000",
@@ -39,7 +39,7 @@
     },
     {
         "id": 5,
-        "categorie": "Calzado",
+        "categorie": "calzado",
         "title": "Zapatos ideales de día",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates ullam earum consequatur",
         "price": "$ 5000",
@@ -48,7 +48,7 @@
     },
     {
         "id": 6,
-        "categorie": "Accesorios",
+        "categorie": "accesorios",
         "title": "Bufandas",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates ullam earum consequatur",
         "price": "$ 2000",
@@ -57,7 +57,7 @@
     },
     {
         "id": 7,
-        "categorie": "Accesorios",
+        "categorie": "accesorios",
         "title": "Guantes",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates ullam earum consequatur",
         "price": "$ 1000",
