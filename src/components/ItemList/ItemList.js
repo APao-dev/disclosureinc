@@ -1,11 +1,11 @@
 
 import React from 'react';
 import Item from '../Item/Item';
-// import './ItemList.css';
+import './ItemList.css';
 
 export default function ItemList({ItemData}) {
     return (
-        <div style={{display: "flex"}} className="itemlistcontainer">
+        <div  className="itemlistcontainer">
             
                 {
                     ItemData.map((post) => {

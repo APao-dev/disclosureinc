@@ -1,0 +1,5 @@
+.itemlistcontainer{
+    display: flex;
+    flex-direction: row;
+ 
+}

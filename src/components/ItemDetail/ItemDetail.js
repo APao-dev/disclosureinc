@@ -10,7 +10,7 @@ export default function ItemDetail({item}) {
             <div style={{display: "flex"}}>
                         
                 <div  key={item.id}>  
-                <p>Categoría: {item.categorie}</p>  
+                <p>Categoría: {item.categorie}</p> <br></br> 
                 <p>{item.title}</p>
                 <p>Detalles: {item.description}</p>                    
                 <p>Precio: {item.price}</p><br></br>

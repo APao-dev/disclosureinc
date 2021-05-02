@@ -32,25 +32,3 @@ export default function ShowItemDetailContainer() {
 
 
 
-// export default function ShowItemDetailContainer() {
-
-//     const [itemDetail, setItemDetail] = useState([])
-    
-//     useEffect(() => {
-
-//         setTimeout(()=> {
-//             getProducts
-//             .then(data=>setItemDetail(data))
-           
-//         }, 2000)
-
-//     }, []);
-
-//     return (
-//         <div  className="itemDetailContainer">
-//             <ItemDetail item={itemDetail}/>
-//         </div>
-//     )
-// }
-
-

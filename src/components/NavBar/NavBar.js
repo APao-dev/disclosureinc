@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import Categories from '../Categories/Categories';
+
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
@@ -56,7 +56,14 @@ export default function ButtonAppBar() {
           <Typography variant="h3" className={classes.title} >
             <Link to="/" className="title-disclo">DisclosureInc</Link>
           </Typography>
-          <Categories />
+
+          <div className={classes.categories}>
+    <Button onClick={() => history.push('/posts/sweaters')} color="inherit">Sweaters</Button>
+    <Button onClick={() => history.push('/posts/calzado')} color="inherit">Calzado</Button>
+    <Button onClick={() => history.push('/posts/accesorios')} color="inherit">Accesorios</Button>
+  </div>
+
+          
           <ShoppingCartOutlinedIcon  className="shopping-car"/> 
          
           <div>
