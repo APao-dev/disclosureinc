@@ -6,9 +6,13 @@ const {getProducts} = require('../../services/post.service');
 
 
 export default function ShowItemDetailContainer() {
-
+    
+   
+    
     const [itemDetail, setItemDetail] = useState([])
     const {id} = useParams()
+    
+
     useEffect(() => {
         
             getProducts
@@ -23,9 +27,12 @@ export default function ShowItemDetailContainer() {
         
     }, );
 
+
+
     return (
         <div  className="itemDetailContainer">
             <ItemDetail item={itemDetail}/>
+          
         </div>
     )
 }

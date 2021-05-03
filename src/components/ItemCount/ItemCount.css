@@ -1,9 +1,9 @@
 
-.count{
-    /* display: flex;
-    flex-direction: row; */
-    /* justify-content: center; */
-}
+/* .count{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+} */
 p{
     color: #8785a2;
     font-size: 1.3rem;
@@ -11,10 +11,12 @@ p{
     
 }
 .button-count{
+    display: flex;
+    justify-content: center;
     background-color: #ffc7c7;
-    padding: 8px;
-    margin: 15px ;
-    width: 30%;
+    padding: 16px;
+    margin: 10px ;
+    width: 50%;
     font-size: 1em;
     border: #8785a2 solid 1px;
     border-radius: 2px;
@@ -22,5 +24,5 @@ p{
 }
 .count-number{
     text-align: center;
-    font-size: 25px;
+    font-size: 24px;
 }

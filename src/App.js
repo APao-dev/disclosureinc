@@ -7,6 +7,7 @@ import ListItemContainer from './containers/ListItemContainer/ListItemContainer'
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
 import HomePageContainer from './containers/homePage/HomePageContainer';
 import ContactContainer from './containers/Contact/ContactContainer';
+import CartContainer from './containers/CartContainer/CartContainer';
 
 
 
@@ -38,6 +39,10 @@ function App() {
         
          <Route path="/item/:id">
          <ItemDetailContainer/>
+         </Route>
+
+         <Route path="/cart">
+         <CartContainer/> 
          </Route>
 
        </Switch>
