@@ -1,6 +1,6 @@
 # DisclosurEinc
 
-<img src="../src/assets/img/sw1.jpeg widht=100">
+<img src="./src/assets/img/sw1.jpeg widht=100">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
