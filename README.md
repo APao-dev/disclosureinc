@@ -1,5 +1,5 @@
 # Bienvenido al repositorio de DICLOSUREINC 💫
-![](https://www.pexels.com/es-es/foto/comida-madera-seco-invierno-5429785/.png)
+![](src/assets/img/sw3.jpeg)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
