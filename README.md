@@ -1,6 +1,6 @@
 # DisclosurEinc
 
-(../assets/img/sw1.jpeg)
+'../assets/img/sw1.jpeg'
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
