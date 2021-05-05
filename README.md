@@ -1,6 +1,6 @@
 # DisclosurEinc
 
-![](src/assets/img/sw1.jpeg 50x20)
+<img src="src/assets/img/sw1.jpeg widht=100">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
