@@ -3,7 +3,7 @@
 =======
 # Bienvenido al repositorio de DICLOSUREINC 💫
 
-<img src="src/assets/img/sw3.jpeg" width="400">
+<img src="src/assets/img/disclo.png" width="400">
 >>>>>>> 74e6737ac8b0f1cacbf004db16b953ee92bd29c2
 
 Este proyecto ha sido creado con la versión 17.0.2 de React. 
