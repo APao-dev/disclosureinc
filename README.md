@@ -1,5 +1,5 @@
 # Bienvenido al repositorio de DICLOSUREINC 💫
-<img src="src/assets/img/sw3.jpeg" width="300">
+<img src="src/assets/img/sw3.jpeg" width="400">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
