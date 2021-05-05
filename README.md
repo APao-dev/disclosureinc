@@ -1,8 +1,6 @@
 # Bienvenido al repositorio de DICLOSUREINC 💫
 <img src="src/assets/img/sw3.jpeg" width="400">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 Este proyecto ha sido creado con la versión 17.0.2 de React. Su funcionalidad principal es la de un e-commerce 
 
 ## Instalación
