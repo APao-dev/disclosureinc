@@ -78,7 +78,7 @@ export default function ButtonAppBar() {
         open={Boolean(anchorEl)}
         onClose={handleClose}> 
       
-      <MenuItem onClick={() => history.push("/posts")}>Todos los Productos</MenuItem>
+      <MenuItem onClick={() => history.push("/posts")}>Catálogo</MenuItem>
       <MenuItem onClick={() => history.push("/contact")}>Sobre Nosotros</MenuItem></Menu>
          
     </div>

@@ -10,9 +10,13 @@ export default function ItemList({ItemData}) {
                 {
                     ItemData.map((post) => {
                         return(
+
                             
+                            <div>
+    
+  
                             <Item key={post.id}  title={post.title} description={post.description} image={post.image} id={post.id}/>
-                           
+                            </div>
                         )
                     })
                 }

@@ -34,6 +34,9 @@ export default function MediaCard({title, description, image, categorie, price, 
   const history =useHistory();
 
   return (
+
+    <div className="space-item">
+      
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
@@ -59,6 +62,7 @@ export default function MediaCard({title, description, image, categorie, price, 
           </Typography>
         </CardContent>
       </CardActionArea>
+
       <CardActions>
         
       
@@ -68,5 +72,7 @@ export default function MediaCard({title, description, image, categorie, price, 
       </CardActions>
       
     </Card>
+    </div>
+    
   );
 }
