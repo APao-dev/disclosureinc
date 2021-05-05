@@ -1,7 +1,7 @@
 
 # Bienvenido al repositorio de DICLOSUREINC 💫
 
-<img src="src/assets/img/disclosure.jpeg" width="400">
+<img src="src/assets/img/disclosure.jpeg" width="500">
 
 
 Este proyecto ha sido creado con la versión 17.0.2 de React. 
