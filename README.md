@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
-=======
+
 # Bienvenido al repositorio de DICLOSUREINC 💫
 
-<img src="src/assets/img/disclo.png" width="400">
->>>>>>> 74e6737ac8b0f1cacbf004db16b953ee92bd29c2
+<img src="src/assets/img/disclo.png" width="300">
+
 
 Este proyecto ha sido creado con la versión 17.0.2 de React. 
 Su objetivo  principal es tener la funcionalidad de un e-commerce 
