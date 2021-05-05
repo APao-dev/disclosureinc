@@ -36,7 +36,7 @@ También se puede acceder a los productos según su categoría desde el Navb
 Cada producto cuenta con información específica al clickear en "Ver más" desde donde lo guiará al siguiente nivel para poder realizar la compra deseada.
 
 
-## Aprende más sobre react <img src="src/assets/img/ract.png" width="100">
+## Aprende más sobre react <img src="src/assets/img/react.png" width="100">
 
 Para aprender React, consulta la documentación de React en el siguiente enlace [React documentation](https://reactjs.org/).
 
