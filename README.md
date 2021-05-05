@@ -1,6 +1,7 @@
 # Bienvenido al repositorio de DICLOSUREINC 💫
 
-![](./src/assets/img/sw1.jpeg)
+
+https://images.app.goo.gl/9tiB3uBQyB8dKsVB7
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
