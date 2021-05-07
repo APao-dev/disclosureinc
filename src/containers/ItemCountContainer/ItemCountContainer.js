@@ -13,7 +13,7 @@ export default function ItemCountContainer({item, setQuantityAdd, setFinishBuy }
 
     useEffect(() => {
         
-    }, [number]);
+    }, [number, itemAdd]);
 
 
     function onIncrement() {

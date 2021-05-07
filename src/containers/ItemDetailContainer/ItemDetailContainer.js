@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 
+
 const {getProducts} = require('../../services/post.service');
 
 
-export default function ShowItemDetailContainer() {
+export default function ItemDetailContainer() {
     
    
     

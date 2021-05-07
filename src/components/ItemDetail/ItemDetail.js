@@ -1,7 +1,8 @@
 import { Button } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-// import ItemCount from '../../components/ItemCount/ItemCount';
+import { useContext } from 'react';
 import ItemCountContainer from '../../containers/ItemCountContainer/ItemCountContainer';
+import{ CartContext } from '../../context/CartContext';
 // import './ItemDetail.css';
 import { useHistory } from 'react-router-dom';
 
@@ -9,8 +10,18 @@ import { useHistory } from 'react-router-dom';
 export default function ItemDetail({item}) {
     //Estados
     const[quantityItemAdd, setQuantityAdd] = useState([]);
+    const initial = 1;
     const[finishBuy, setFinishBuy] = useState(false);
     
+    const{cart, addItem} = useContext(CartContext);
+
+    const addToCart = () => {
+        item.stock -= quantityItemAdd;
+        setQuantityAdd(initial);
+
+        addItem(item, quantityItemAdd);
+    }
+
     const history = useHistory();
 
 
@@ -18,6 +29,7 @@ export default function ItemDetail({item}) {
 useEffect(() => {
     setQuantityAdd(quantityItemAdd);
 }, []);
+
 
     return( 
     
@@ -33,11 +45,15 @@ useEffect(() => {
                 <p>Precio: {item.price}</p><br></br>
                 </div>
 
-            <ItemCountContainer product ={item} setQuantityAdd={setQuantityAdd} setFinishBuy={setFinishBuy}/>
+            <ItemCountContainer product ={item} 
+            stock={item.stock} value={quantityItemAdd} setQuantityAdd={setQuantityAdd} setFinishBuy={setFinishBuy}/>
+
+            <Button onClick={() => addToCart()}></Button>
 
              { 
              finishBuy ? (
                 <Button onClick={() => history.push('/cart')}>Finalizar Compra</Button>
+                // {items.title} {items.price}
             ): null
             }
 
