@@ -48,7 +48,7 @@ useEffect(() => {
             <ItemCountContainer product ={item} 
             stock={item.stock} value={quantityItemAdd} setQuantityAdd={setQuantityAdd} setFinishBuy={setFinishBuy}/>
 
-            <Button onClick={() => addToCart()}></Button>
+          
 
              { 
              finishBuy ? (
