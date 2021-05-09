@@ -5,11 +5,8 @@
         "title": "Sweater blanco de mujer",
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates ullam earum consequatur optio debitis",
         "price": 222,
-        "image":
-
-       
+        "image":""      
     },
-
     {
         "id": 2,"categorie": "sweaters",
         "title": "Abrigadísimo",
