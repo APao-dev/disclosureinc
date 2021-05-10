@@ -19,8 +19,8 @@ export default function CartWidget(){
     return(
         <Link to= '/cart'>
         <div>
-            <div className="cart-number">{cart}</div>
-            <ShoppingCartOutlinedIcon  id="shopping-car" style={{width:"20px"}}/> 
+            <div className="cart-number" >{cant}</div>
+            <ShoppingCartOutlinedIcon  id="shopping-cart" style={{width:"30px",  height:"50px"}}/> 
         </div>
         </Link>
     )

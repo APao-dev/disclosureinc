@@ -9,8 +9,7 @@ import Button from '@material-ui/core/Button';
 // Para la lista desplegable con las opciones
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-
+import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
@@ -58,16 +57,16 @@ export default function ButtonAppBar() {
           </Typography>
 
           <div className={classes.categories}>
-    <Button onClick={() => history.push('/posts/sweaters')} color="inherit">Sweaters</Button>
-    <Button onClick={() => history.push('/posts/calzado')} color="inherit">Calzado</Button>
-    <Button onClick={() => history.push('/posts/accesorios')} color="inherit">Accesorios</Button>
+    <Button onClick={() => history.push('/posts/sweaters')} color="inherit"  style={{padding:'30px'}}>Sweaters</Button>
+    <Button onClick={() => history.push('/posts/calzado')} color="inherit" style={{padding:'30px'}}>Calzado</Button>
+    <Button onClick={() => history.push('/posts/accesorios')} color="inherit"  style={{padding:'30px'}}>Accesorios</Button>
   </div>
 
-          
-          <ShoppingCartOutlinedIcon  className="shopping-car"/> 
+          <CartWidget/>
+         
          
           <div>
-        <Button className="boton-menu" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+        <Button className="boton-menu" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} style={{padding:'20px'}}>
         Open Menu
         </Button>
       
