@@ -10,12 +10,21 @@ const CartProvider = ({ defaultValue = [], children}) => {
 
     const [cart, setCart] = useState(defaultValue);
     const [totalPrice, setTotalPrice] = useState(0);
+
+
     const addItem = (items, quantity) => {
-        setCart([...cart, {items,quantity}])
+        const product =cart.find((item) => item.items.id === items.id);
+        if(product) {
+            let newQuantity = product.quantity + quantity;
+            let position = cart.indexOf(product);
+            cart[position].quantity = newQuantity;
+        } else {
+            setCart([...cart, {items, quantity}])
+        } 
     };
 
     const removeItem = (itemId) => {
-        setCart(cart.filter((re) => re.item.id !== itemId))
+        setCart(cart.filter((re) => re.items.id !== itemId))
     };
 
     const clear = () => {
@@ -34,7 +43,7 @@ const CartProvider = ({ defaultValue = [], children}) => {
     const Total = () => {
         let total =0;
         for(let i= 0; i < cart.length; i++) {
-            total = total + cart[i].item.price * cart[i].quantity;
+            total = total + cart[i].items.price * cart[i].quantity;
         }
         return total;
     }

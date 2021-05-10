@@ -10,7 +10,8 @@ export default function CartContainer() {
     let total = 0;
 
     for(let i =0; i< cart.length; i++) {
-        total = total + cart[i].item.price * cart[i].quantity;
+        console.log(cart);
+        total = total + cart[i].items.price * cart[i].quantity;
     }
 
 
@@ -25,7 +26,7 @@ export default function CartContainer() {
                     <ItemCart key={key} {...item}/>)
                     )}
                     <div>
-                        <h3>${total}</h3>
+                        <h3>$ {total}</h3>
                     </div>
                     <Button onClick={() =>clear()}>Vaciar Carrito</Button>
 

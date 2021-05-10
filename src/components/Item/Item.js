@@ -66,7 +66,7 @@ export default function MediaCard({title, description, image, categorie, price, 
       <CardActions>
         
       
-        <ItemCountContainer/>
+        {/* <ItemCountContainer/> */}
         <Button onClick={() => history.push(`/item/${id}`)} style={{padding:"14px", color:"#ffc7c7", border:"#8785a2 solid 1px"}}>Ver más</Button>
        
       </CardActions>

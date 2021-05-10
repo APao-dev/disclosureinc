@@ -1,7 +1,7 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import ItemCount from '../../components/ItemCount/ItemCount';
-
+import { CartContext } from '../../context/CartContext';
 
 export default function ItemCountContainer({item, setQuantityAdd, setFinishBuy }){
 
@@ -9,6 +9,7 @@ export default function ItemCountContainer({item, setQuantityAdd, setFinishBuy }
     
     const[itemAdd, setItemAdd] = useState(false);
    
+    const{addItem} = useContext(CartContext);
 
 
     useEffect(() => {
@@ -34,9 +35,9 @@ export default function ItemCountContainer({item, setQuantityAdd, setFinishBuy }
                
     }
 
-    function onAdd(quantity) {
+    function onAdd() {
         setItemAdd(true)
-        setQuantityAdd(item, quantity.number)
+        addItem(item, number)
         setFinishBuy(true);
     }
     

@@ -1,18 +1,18 @@
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
-
-const ItemCart = ({ item, quantity }) => {
+import Button from '@material-ui/core/Button';
+const ItemCart = ({ items, quantity }) => {
     const { removeItem } = useContext(CartContext);
 
 
     return(
         <div>
-            <h3>{item.title}</h3>
-            <h2>{item.description}</h2>
-            <h2>{quantity}</h2>
-            <h2>{item.price}</h2>
+            <h3>Producto: {items.title}</h3>
+          
+            <h2>Cantidad: {quantity}</h2>
+            <h2>Precio $ {items.price}</h2>
 
-            <button className="btn delete-icon-btn"  onClick={() => removeItem(item.id)}></button>
+            <Button className="btn delete-icon-btn"  onClick={() => removeItem(items.id)} style={{padding:"14px", color:"#8785a2", border:"#8785a2 solid 1px"}}> Eliminar producto</Button>
             
 
         </div>

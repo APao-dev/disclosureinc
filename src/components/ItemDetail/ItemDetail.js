@@ -28,7 +28,7 @@ export default function ItemDetail({item}) {
 
 useEffect(() => {
     setQuantityAdd(quantityItemAdd);
-}, []);
+}, [cart]);
 
 
     return( 
@@ -45,7 +45,7 @@ useEffect(() => {
                 <p>Precio: {item.price}</p><br></br>
                 </div>
 
-            <ItemCountContainer product ={item} 
+            <ItemCountContainer item ={item} 
             stock={item.stock} value={quantityItemAdd} setQuantityAdd={setQuantityAdd} setFinishBuy={setFinishBuy}/>
 
           
