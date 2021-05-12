@@ -1,6 +1,5 @@
  import React, { useContext } from 'react';
  import { Link } from "react-router-dom";
-// Intentando agregar la cartWidget al navBar
 // Icono carrito
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 // Importando el CSS
@@ -9,20 +8,36 @@ import { CartContext } from '../../context/CartContext';
 
 export default function CartWidget(){
 
-    const { cart } = useContext(CartContext);
-    let cant = 0;
+    const { cart, cantTotal } = useContext(CartContext);
 
-    for (let i = 0; i < cart.length; i++) {
-        cant = cant + cart[i].quantity;
-    }
+    let cantCar = cart.map(prod => prod.quantity);
+    
+    let fullCar = cantCar.reduce((counterBefore, counterAfter) => {
+        return counterBefore + counterAfter
+    
+    }, 0);
+
+
+
 
     return(
-        <Link to= '/cart'>
         <div>
-            <div className="cart-number" >{cant}</div>
+            { cart.length === 0 ?
+        <Link to= '/cart'>
+        
             <ShoppingCartOutlinedIcon  id="shopping-cart" style={{width:"30px",  height:"50px"}}/> 
+        </ Link>
+        :  
+        <Link to='/cart'>
+             <ShoppingCartOutlinedIcon  id="shopping-cart" style={{width:"30px",  height:"50px"}}/> 
+             { cantTotal ? <span>{cantTotal}</span> :null}
+             <div>
+                 {fullCar}
+             </div>
+        </Link>   
+        }      
         </div>
-        </Link>
+    
     )
 }
 
