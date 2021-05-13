@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import Img from '../../assets/img/sw6.jpeg';
-import ItemCountContainer from '../../containers/ItemCountContainer/ItemCountContainer';
+// import ItemCountContainer from '../../containers/ItemCountContainer/ItemCountContainer';
 import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({

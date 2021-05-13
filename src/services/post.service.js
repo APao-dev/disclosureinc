@@ -1,15 +1,38 @@
 
-const getProducts = new Promise((resolve, reject) => {
+import db from '../firebase';
 
-    fetch('https://raw.githubusercontent.com/APao-dev/disclosureinc/main/src/components/Item/Item.json')
-    .then(response => response.json())
-    .then(data => resolve(data))
-    .catch(err => reject(err))
-})
 
-module.exports ={
-    getProducts
+const itemCollection = db.collection('items');
+
+export function getProducts() {
+    return itemCollection.get()
+      .then(snapShot => {
+          return snapShot.docs.map(doc => doc.data())
+      })  
+     
+
 }
+
+export function getProductsById(productId) {
+    const itemById = itemCollection.where('id', "==", parseInt(productId));
+    return itemById.get()
+    .then(snapShot => {
+        return snapShot.docs.map(doc => doc.data())
+    })
+
+}
+
+// {
+
+//     fetch('https://raw.githubusercontent.com/APao-dev/disclosureinc/main/src/components/Item/Item.json')
+//     .then(response => response.json())
+//     .then(data => resolve(data))
+//     .catch(err => reject(err))
+// })
+
+// module.exports ={
+//     getProducts
+// }
 
 
 

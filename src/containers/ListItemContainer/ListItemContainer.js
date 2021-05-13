@@ -1,33 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from "../../components/ItemList/ItemList";
-import { useParams } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 const {getProducts} = require('../../services/post.service');
 
 export default function ItemListContainer() {
 
     const[item, setItem] = useState([])
-    const{categoryId} = useParams();
+    
 
     useEffect(() => {
-        getProducts
-       
-                      
-            .then((data) => {
-                const category = data.filter(item => item.categorie === categoryId) 
-                setItem(category)
-            })        
+        getProducts                      
+            .then(data => setItem(data))       
         
-    },[categoryId] );
+    },[] );
 
     return(
         <div>
-            {
+            <div>
+                <Link to='/posts'></Link>
+            </div>
+            
                <div style={{display: "flex"}}>
                     <ItemList ItemData={item}/>
                 </div>
-            }
+            
         </div>
     )
 

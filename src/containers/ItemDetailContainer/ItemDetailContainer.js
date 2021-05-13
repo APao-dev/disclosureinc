@@ -3,8 +3,7 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 
 
-const {getProducts} = require('../../services/post.service');
-
+const {getProductsById} = require('../../services/post.service');
 
 export default function ItemDetailContainer() {
     
@@ -16,7 +15,7 @@ export default function ItemDetailContainer() {
 
     useEffect(() => {
         
-            getProducts
+            getProductsById(id)
             // filtrar
             .then(data=> {
                 const idPars = parseInt(id)
@@ -26,7 +25,7 @@ export default function ItemDetailContainer() {
             }
             )
         
-    }, );
+    },[id] );
 
 
 

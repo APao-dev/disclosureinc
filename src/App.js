@@ -13,3 +13,26 @@ function App() {
     
 }
 export default App;
+
+
+
+// const { cart, cantTotal } = useContext(CartContext);
+
+//     return(
+//         <div>
+//             { cart.length === 0 ?
+//         <Link to= '/cart'>
+        
+//             <ShoppingCartOutlinedIcon  id="shopping-cart" style={{width:"30px",  height:"50px"}}/> 
+//         </ Link>
+//         :  
+//         <Link to='/cart'>
+//              <ShoppingCartOutlinedIcon  id="shopping-cart" style={{width:"30px",  height:"50px"}}/> 
+//              { cantTotal ? <span>{cantTotal}</span> :null}
+//         </Link>   
+//         }      
+//         </div>
+    
+//     )
+// }
+
