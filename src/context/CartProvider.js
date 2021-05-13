@@ -17,7 +17,9 @@ const CartProvider = ({ defaultValue = [], children}) => {
         if(product) {
             let newQuantity = product.quantity + quantity;
             let position = cart.indexOf(product);
-            cart[position].quantity = newQuantity;
+            let copy =[...cart];
+            copy[position].quantity = newQuantity;
+            setCart(copy);
         } else {
             setCart([...cart, {items, quantity}])
         } 

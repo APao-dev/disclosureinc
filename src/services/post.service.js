@@ -7,17 +7,17 @@ const itemCollection = db.collection('items');
 export function getProducts() {
     return itemCollection.get()
       .then(snapShot => {
-          return snapShot.docs.map(doc => doc.data())
+          return snapShot.docs.map(doc => ({...doc.data(), id: doc.id}))
       })  
      
 
 }
 
 export function getProductsById(productId) {
-    const itemById = itemCollection.where('id', "==", parseInt(productId));
+    const itemById = itemCollection.doc(productId)
     return itemById.get()
     .then(snapShot => {
-        return snapShot.docs.map(doc => doc.data())
+        return ({...snapShot.data(), id: snapShot.id})
     })
 
 }

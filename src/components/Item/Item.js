@@ -28,7 +28,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard({title, description, image, categorie, price, id}) {
+export default function MediaCard({title, subtitle, description, image, categorie, price, id}) {
   
   const classes = useStyles();
   const history =useHistory();
@@ -43,6 +43,7 @@ export default function MediaCard({title, description, image, categorie, price, 
           className={classes.media}
           image={Img}
           title={title}
+        
           description={description}
           categorie={categorie}
 
@@ -50,7 +51,8 @@ export default function MediaCard({title, description, image, categorie, price, 
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {categorie}
-           {title}
+           {title}<br></br>
+           {subtitle}
            
            
            

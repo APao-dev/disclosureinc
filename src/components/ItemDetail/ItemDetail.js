@@ -38,8 +38,9 @@ useEffect(() => {
                         
                 <div  key={item.id}>  
                 <img src={item.image} alt={item.image}></img>
-                <p>Categoría: {item.categorie}</p> <br></br> 
+                <p>Categoría: {item.category}</p> <br></br> 
                 <p>{item.title}</p>
+                <p>{item.subtitle}</p>
                 
                 <p>Detalles: {item.description}</p>                    
                 <p>Precio: {item.price}</p><br></br>

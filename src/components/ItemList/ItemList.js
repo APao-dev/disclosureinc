@@ -15,7 +15,8 @@ export default function ItemList({ItemData}) {
                             <div>
     
   
-                            <Item  key={post.id}  title={post.title} description={post.description} image={post.image} id={post.id}/>
+                            <Item  key={post.id}  title={post.title} 
+                            description={post.description} image={post.image} id={post.id}/>
                             </div>
                         )
                     })

@@ -6,9 +6,7 @@ import { useParams } from 'react-router-dom';
 const {getProductsById} = require('../../services/post.service');
 
 export default function ItemDetailContainer() {
-    
-   
-    
+        
     const [itemDetail, setItemDetail] = useState([])
     const {id} = useParams()
     
@@ -18,10 +16,8 @@ export default function ItemDetailContainer() {
             getProductsById(id)
             // filtrar
             .then(data=> {
-                const idPars = parseInt(id)
-                const filtro = data.filter(item => item.id === idPars)
-                setItemDetail(filtro[0]) 
-                console.log(filtro)
+                setItemDetail(data)
+               
             }
             )
         
