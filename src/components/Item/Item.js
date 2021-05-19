@@ -8,7 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import Img from '../../assets/img/sw6.jpeg';
+import img from '../../assets/img/sw6.jpeg';
 // import ItemCountContainer from '../../containers/ItemCountContainer/ItemCountContainer';
 import { useHistory } from 'react-router-dom';
 
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard({title, subtitle, description, image, categorie, price, id}) {
+export default function MediaCard({title, subtitle, description, image, category, price, id}) {
   
   const classes = useStyles();
   const history =useHistory();
@@ -41,16 +41,16 @@ export default function MediaCard({title, subtitle, description, image, categori
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={Img}
+          image={img}
           title={title}
         
           description={description}
-          categorie={categorie}
+          category={category}
 
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {categorie}
+            {category}
            {title}<br></br>
            {subtitle}
            

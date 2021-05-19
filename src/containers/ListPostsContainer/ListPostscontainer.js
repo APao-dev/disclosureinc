@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from "../../components/ItemList/ItemList";
 import { useParams, Link } from 'react-router-dom';
-
 const {getProducts} = require('../../services/post.service');
 
 export default function ItemListContainer() {
@@ -34,5 +33,4 @@ export default function ItemListContainer() {
     )
 
 }
-
-
+     

@@ -8,7 +8,7 @@ import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 import HomePageContainer from '../homePage/HomePageContainer';
 import ContactContainer from '../Contact/ContactContainer';
 import CartContainer from '../CartContainer/CartContainer';
-
+import Login from '../../components/Login/Login';
 
 
 function App() {
@@ -39,6 +39,11 @@ function App() {
         
          <Route path="/item/:id">
          <ItemDetailContainer/>
+         </Route>
+
+
+         <Route path="/login">
+         <Login/> 
          </Route>
 
          <Route path="/cart">

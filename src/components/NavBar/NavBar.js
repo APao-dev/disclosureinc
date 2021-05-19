@@ -81,8 +81,10 @@ export default function ButtonAppBar() {
       <MenuItem onClick={() => history.push("/contact")}>Sobre Nosotros</MenuItem></Menu>
          
     </div>
-
-          <Button color="inherit">Login</Button>
+    
+    <Link className="title-disclo"
+            to="/login">LOGIN</Link> 
+          
         </Toolbar>
       </AppBar>
     </div>

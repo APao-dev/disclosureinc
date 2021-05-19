@@ -5,7 +5,7 @@ import ItemCountContainer from '../../containers/ItemCountContainer/ItemCountCon
 import{ CartContext } from '../../context/CartContext';
 // import './ItemDetail.css';
 import { useHistory } from 'react-router-dom';
-
+import './ItemDetail.css';
 
 export default function ItemDetail({item}) {
     //Estados
@@ -40,7 +40,7 @@ useEffect(() => {
                 <img src={item.image} alt={item.image}></img>
                 <p>Categoría: {item.category}</p> <br></br> 
                 <p>{item.title}</p>
-                <p>{item.subtitle}</p>
+                <p>{item.subtitle}</p> <br></br>
                 
                 <p>Detalles: {item.description}</p>                    
                 <p>Precio: {item.price}</p><br></br>

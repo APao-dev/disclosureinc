@@ -1,7 +1,9 @@
 
 import db from '../firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
-
+//Refactorizando el GET
 const itemCollection = db.collection('items');
 
 export function getProducts() {
@@ -10,7 +12,6 @@ export function getProducts() {
           return snapShot.docs.map(doc => ({...doc.data(), id: doc.id}))
       })  
      
-
 }
 
 export function getProductsById(productId) {
@@ -22,96 +23,64 @@ export function getProductsById(productId) {
 
 }
 
-// {
+const orderCollection = db.collection("orders")
 
-//     fetch('https://raw.githubusercontent.com/APao-dev/disclosureinc/main/src/components/Item/Item.json')
-//     .then(response => response.json())
-//     .then(data => resolve(data))
-//     .catch(err => reject(err))
-// })
+export function createOrder(buyer, item, totalPrice) {
+    return orderCollection
+    .add({
+    
+      buyer: buyer,
+      item: item,
+      date: firebase.firestore.Timestamp.fromDate(new Date()),
+      total: totalPrice,
+    })
+   
+    .then(function(newOrder) {
+        return newOrder.id;
+    })
+    .catch((err) => {});
 
-// module.exports ={
-//     getProducts
-// }
+
+    
+}
 
 
 
+/* 
+ESTA FUNCION PASARÁ A HACER LA QUE REEMPLACE A LA DE LA LÍNEA 7
+Me devuelve mi "colección"(todos los productos) Después la tengo que importar a "Cartcontainer.js"
 
-//GET//
-// function getPosts(quantity) {
-//     return new Promise ((resolve, reject) => {
-//         fetch(`https://jsonplaceholder.typicode.com/posts?_page=1&_limit=${quantity}`)
-//         .then(res => res.json())
-//         .then(data => resolve(data))
-//         .then(err => reject(err))
-//     })
-// }
+const orderCollection = db.collection("order")
 
+export function getCollection() {
+    return orderCollection;
+}
+
+export async function getProducts() {
+    const docRef = await itemCollection.get();
+
+    const posts = docRef.docs.map(getDocDataAndId);
+        
+    return posts;
+
+}
 
 // POST//
-// function createPost(post) {
-//     return new Promise((resolve, reject) => {
-//         fetch(`https://jsonplaceholder.typicode.com/posts`, {
-//             method: 'POST',
-//             body: JSON.stringify({
-//                 userId: post.userId,
-//                 title: post.title,
-//                 body: post.body
-//             }),
-//             headers: {
-//                 'Content-type': 'application/json: charset=UTF-8'
-//             }
-//         })
-//         .then(res => res.json())
-//         .then(data => resolve(data))
-//         .catch(err => reject(err))
-
-//     })
+// export async function createPost(post) {
+//    itemCollection.add(post);
 // }
 
-
-//UPDATE//
-// function updatePost(data) {
-   // fetch(`https://jsonplaceholder.typicode.com/posts/${data.postId}`, {
-//             method: 'PUT',
-//             body: JSON.stringify({
-//                 userId: post.userId,
-//                 title: post.title,
-//                 body: post.body
-//             }),
-//             headers: {
-//                 'Content-type': 'application/json: charset=UTF-8'
-//             }
-//         })
-//         .then(res => res.json())
-//         .then(data => resolve(data))
-//         .catch(err => reject(err))
-    // })
-
-// }
+*/
 
 
-//PATCH//
-// function patchPost(data) {
+//UPDATE// PRIMERO DEBEMOS OBTENER LA REFERENCIA DEL DOCUMENTO QUE QUEREMOS MODIFICAR 
+/*
+export async function updatePost(data) {
+    const docRef = await postCollection.doc(data.postId);
+    
+    await docRef.update(data);
 
-// }
+}
 
+*/
 
-//DELETE//
-// function deletePost(id){
-    //fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-        //method:'DELETE'
-    // })
-    // .then(res => res.json())
-    // .then(data => resolve(data))
-    // .catch(err => reject(err))
-
-// }
-
-// module.exports = {
-//     createPost,
-//     updatePost,
-//     getPosts,
-//     patchPost,
-//     deletePost,
-// }
