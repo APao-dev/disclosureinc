@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import ItemCart from '../../components/ItemCart/ItemCart';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
+
+const { createOrder } = require('../../services/post.service');
+
 
 export default function CartContainer() {
     const{ cart, clear } = useContext(CartContext);
@@ -14,6 +17,17 @@ export default function CartContainer() {
         total = total + cart[i].items.price * cart[i].quantity;
     }
 
+    const [buyer, setBuyer] = useState(
+        { name: "", 
+        phone: "", 
+        email: "" });
+        
+    const handleInputChange = (e) => {
+        setBuyer({
+          ...buyer,
+          [e.target.name]: e.target.value,
+        });
+      };    
 
     return(
         <div>
@@ -28,21 +42,58 @@ export default function CartContainer() {
                     <div>
                         <h3>$ {total}</h3>
                     </div>
-                    <Button onClick={() =>clear()}>Vaciar Carrito</Button>
+                    <Button onClick={() =>clear()}>Vaciar Carrito</Button> <br></br>
 
                     <Link to="/posts" >
           <Button >
             Volver a la lista
           </Button>
-        </Link>
+        </Link>       
 
+        
 
-           <Link
-            to="/login">
-            <button >Login</button>
-            </Link>
+        <div>
+        {/* { cart.lenght === 0 ? ( Esto ya viene en la línea 36 */}
 
-            </div>
+            <Button onClick={createOrder}>
+          
+                Confirmar Pedido
+        
+            </Button> 
+
+            <label htmlFor="name">Nombre</label>
+                <input
+                type="text"
+                name="name"
+                onChange={handleInputChange}
+                id="name"
+                placeholder=" "
+                />
+                
+                
+                <label htmlFor="tel">Teléfono</label>
+                <input
+                type="text"
+                name="phone"
+                onChange={handleInputChange}
+                id="tel"
+                placeholder=" "
+                />
+                
+                <label htmlFor="email">Email</label>
+                <input
+                type="email"
+                name="email"
+                onChange={handleInputChange}
+                id="email"
+                placeholder=" "
+                />
+                {/* ) */}
+                <br></br>
+
         </div>
+
+        </div>
+    </div>
     )
 }
