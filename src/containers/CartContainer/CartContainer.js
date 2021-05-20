@@ -45,55 +45,56 @@ export default function CartContainer() {
                     <Button onClick={() =>clear()}>Vaciar Carrito</Button> <br></br>
 
                     <Link to="/posts" >
-          <Button >
-            Volver a la lista
-          </Button>
-        </Link>       
 
-        
+                    <Button >
+                        Volver a la lista
+                    </Button>
+                    </Link> <br></br>   
 
-        <div>
-        {/* { cart.lenght === 0 ? ( Esto ya viene en la línea 36 */}
+            </div>
 
-            <Button onClick={createOrder}>
+            <div>
+            
+                <form>
+                <label htmlFor="name">Nombre</label>
+                    <input
+                    type="text"
+                    name="name"
+                    onChange={handleInputChange}
+                    id="name"
+                    placeholder=" "
+                    />
+                    
+                    
+                    <label htmlFor="tel">Teléfono</label>
+                    <input
+                    type="text"
+                    name="phone"
+                    onChange={handleInputChange}
+                    id="tel"
+                    placeholder=" "
+                    />
+                    
+                    <label htmlFor="email">Email</label>
+                    <input
+                    type="email"
+                    name="email"
+                    onChange={handleInputChange}
+                    id="email"
+                    placeholder=" "
+                    />
+                </form>
+                <br></br>
+                <Button onSubmit={createOrder}>
           
                 Confirmar Pedido
-        
-            </Button> 
+  
+                </Button> 
 
-            <label htmlFor="name">Nombre</label>
-                <input
-                type="text"
-                name="name"
-                onChange={handleInputChange}
-                id="name"
-                placeholder=" "
-                />
-                
-                
-                <label htmlFor="tel">Teléfono</label>
-                <input
-                type="text"
-                name="phone"
-                onChange={handleInputChange}
-                id="tel"
-                placeholder=" "
-                />
-                
-                <label htmlFor="email">Email</label>
-                <input
-                type="email"
-                name="email"
-                onChange={handleInputChange}
-                id="email"
-                placeholder=" "
-                />
-                {/* ) */}
-                <br></br>
+            </div>
+
 
         </div>
 
-        </div>
-    </div>
     )
 }

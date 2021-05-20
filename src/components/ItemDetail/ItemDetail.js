@@ -54,7 +54,7 @@ useEffect(() => {
              { 
              finishBuy ? (
                 <Button onClick={() => history.push('/cart')}>Finalizar Compra</Button>
-                // {items.title} {items.price}
+               
             ): null
             }
 

@@ -25,14 +25,14 @@ export function getProductsById(productId) {
 
 const orderCollection = db.collection("orders")
 
-export function createOrder(buyer, item, totalPrice) {
+export function createOrder(buyer, item, total) {
     return orderCollection
     .add({
     
       buyer: buyer,
       item: item,
       date: firebase.firestore.Timestamp.fromDate(new Date()),
-      total: totalPrice,
+      total: total,
     })
    
     .then(function(newOrder) {

@@ -14,7 +14,7 @@ import Login from '../../components/Login/Login';
 function App() {
 
     return(
-        <div>
+    
             <Router>
             <NavBar/>  
               
@@ -52,7 +52,7 @@ function App() {
 
        </Switch>
        </Router>
-        </div>
+       
 
     )
 

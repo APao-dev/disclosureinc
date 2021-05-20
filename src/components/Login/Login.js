@@ -31,8 +31,9 @@ return(
         </Link>
    </div>
 
-    <div  hidden={context.cart.length === 0}>
+    <div>
         <div>Facturación</div>
+
 
         <input
           type="text"
