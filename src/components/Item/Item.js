@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -34,7 +34,7 @@ export default function MediaCard({title, subtitle, description, image, category
   const history =useHistory();
 
   return (
-
+<Fragment>
     <div className="space-item">
       
     <Card className={classes.root}>
@@ -75,6 +75,6 @@ export default function MediaCard({title, subtitle, description, image, category
       
     </Card>
     </div>
-    
+    </Fragment>
   );
 }

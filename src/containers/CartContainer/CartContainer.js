@@ -27,7 +27,17 @@ export default function CartContainer() {
           ...buyer,
           [e.target.name]: e.target.value,
         });
-      };    
+      };   
+
+      const handleOnSubmit = (e) => {
+        setBuyer({
+          ...buyer,
+          [e.target.name]: e.target.value,
+        });
+      };  
+      
+
+         
 
     return(
         <div>
@@ -55,7 +65,7 @@ export default function CartContainer() {
 
             <div>
             
-                <form>
+                <form onSubmit={handleOnSubmit}>
                 <label htmlFor="name">Nombre</label>
                     <input
                     type="text"
@@ -85,7 +95,7 @@ export default function CartContainer() {
                     />
                 </form>
                 <br></br>
-                <Button onSubmit={createOrder}>
+                <Button onClick={createOrder}>
           
                 Confirmar Pedido
   
