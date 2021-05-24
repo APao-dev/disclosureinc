@@ -25,7 +25,7 @@ export default function CartWidget(){
             { cart.length === 0 ?
         <Link to= '/cart'>
         
-            <ShoppingCartOutlinedIcon  id="shopping-cart" style={{width:"30px",  height:"50px"}}/> 
+            <ShoppingCartOutlinedIcon  id="shopping-cart" style={{width:"30px",  height:"60px", color:"#845460"}}/> 
         </ Link>
         :  
         <Link to='/cart'>

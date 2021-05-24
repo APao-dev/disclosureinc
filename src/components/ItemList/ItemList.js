@@ -1,28 +1,30 @@
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import Item from '../Item/Item';
+import { Grid } from '@material-ui/core';
 import './ItemList.css';
 
 export default function ItemList({ItemData}) {
 
     return (
-        <div  className="itemlistcontainer">
             
+        <Fragment>
+            <Grid container spacing={12} justify="center">
                 {
-                    ItemData.map((post) => {
-                        return(
+                    ItemData.map((post, index) => {
 
+                        // let url ="https://raw.githubusercontent.com/APao-dev/disclosureinc/main/src/assets/img/"
+                        // let postIndex = post.url.split('/')[post.url.split('/').length - 2]
+                        
+                        return(   
                             
-                            <div>
-    
-  
-                            <Item  key={post.id}  title={post.title} 
-                            description={post.description} image={post.image} id={post.id}/>
-                            </div>
+                            <Item  key={post.id}  title={post.title} subtitle={post.subtitle}
+                            description={post.description} image={post.image} price={post.price} id={post.id}/>
+                           
                         )
                     })
                 }
-            
-        </div>
+                </Grid>
+            </Fragment>
     )
 }

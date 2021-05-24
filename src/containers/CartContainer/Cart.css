@@ -1,0 +1,55 @@
+
+
+.message {
+    color: rgba(80, 76, 73, 0.952);
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin: 5rem;
+  }
+
+.message-card {
+    border: none;
+    padding: 2.5rem;
+    }
+.container{
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-buyer{
+    display: flex;
+    flex-direction: column;
+    height: 20em;
+    width: 20em;
+    border: 0.3em solid rgb(250, 142, 158);
+    border-radius: 0.4em;
+    padding: 2em;
+    margin-bottom: 2em;
+   
+}    
+.form-buyer__input{
+    padding:  0.8em;
+    margin-bottom: 1.3em;
+
+}
+
+.form-button{
+    padding: 0.8em;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(158, 218, 216, 0.748);
+    color: rgba(170, 73, 73, 0.954);
+    border-radius: 0.6em;
+}
+
+.button-clear{
+    border: 0.6em solid rgba(228, 142, 66, 0.94); 
+    padding: 1em;
+    text-decoration: none
+    ;
+}

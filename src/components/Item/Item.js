@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -7,16 +7,13 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
 import img from '../../assets/img/sw6.jpeg';
-// import ItemCountContainer from '../../containers/ItemCountContainer/ItemCountContainer';
 import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 340,
-    margin: 20,
-    
+    margin: 20,    
        
   },
   media: {
@@ -34,47 +31,40 @@ export default function MediaCard({title, subtitle, description, image, category
   const history =useHistory();
 
   return (
-<Fragment>
-    <div className="space-item">
+
+    <div className="space-item" >
       
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
-          className={classes.media}
+          className={classes.media} 
           image={img}
-          title={title}
-        
-          description={description}
-          category={category}
+         
 
         />
-        <CardContent>
+        <CardContent >
           <Typography gutterBottom variant="h5" component="h2">
             {category}
-           {title}<br></br>
-           {subtitle}
-           
-           
-           
+           <p style={{fontSize:"25px", color:"plum", fontFamily:"cursive"}}>{title}</p>
+           <p style={{fontSize:"15px"}}>{subtitle}</p>           
+           <p>$ {price}</p>
           </Typography>
          
           <Typography variant="body2" color="textSecondary" component="p">
-           
-           {price}
+          
           </Typography>
         </CardContent>
       </CardActionArea>
 
       <CardActions>
         
-      
-        {/* <ItemCountContainer/> */}
-        <Button onClick={() => history.push(`/item/${id}`)} style={{padding:"14px", color:"#ffc7c7", border:"#8785a2 solid 1px"}}>Ver más</Button>
+        <Button onClick={() => history.push(`/item/${id}`)} style={{padding:"14px", marginLeft:"23px", marginRight:"23px", color:"#ffc7c7", border:"#8785a2 solid 1px"}}>Ver más</Button>
        
+        <Button onClick={() => history.push(`/item/${id}`)} style={{padding:"14px", marginLeft:"23px", marginRight:"23px", color:"#ffc7c7", border:"#8785a2 solid 1px"}}>Comprar</Button>
       </CardActions>
       
     </Card>
     </div>
-    </Fragment>
+  
   );
 }

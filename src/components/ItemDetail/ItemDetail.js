@@ -33,8 +33,8 @@ useEffect(() => {
 
     return( 
     
-       <div ><h2>Descripción del producto</h2>
-            <div style={{display: "flex"}}>
+       <div className="container"><h2>Descripción del producto</h2>
+            <div style={{display: "flex", flexDirection:"column", justifyContent: 'center', alignItems:"center",  width:500, border:"solid", color:"white", marginBottom:"20px", padding:"2.4em", marginRight:"1em"}}>
                         
                 <div  key={item.id}>  
                 <img src={item.image} alt={item.image}></img>
@@ -42,8 +42,8 @@ useEffect(() => {
                 <p>{item.title}</p>
                 <p>{item.subtitle}</p> <br></br>
                 
-                <p>Detalles: {item.description}</p>                    
-                <p>Precio: {item.price}</p><br></br>
+                <p>Detalles: {item.description}</p>  <br></br>                  
+                <p>Precio:$ {item.price}</p><br></br>
                 </div>
 
             <ItemCountContainer item ={item} 

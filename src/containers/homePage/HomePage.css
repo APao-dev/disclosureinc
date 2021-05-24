@@ -1,0 +1,22 @@
+body {
+    background-image: url(../../assets/img/disclosure.jpeg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* body:before{ 
+    content: "";
+    
+    background-color: yellow;
+   
+} */
+#root{
+    background-color: #ffe2e2c4;
+    width: 100%;
+    height: 100%;
+}
+/* .welcome-title{
+    font-size: 10rem;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
