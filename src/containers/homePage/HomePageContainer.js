@@ -5,15 +5,15 @@ export default function HomePageContainer() {
 
     
     return(
-        <Fragment>
+       <div className="home">
         <div  style={{display:"flex", justifyContent:"center"}}>
-            <h1 classname="welcome-title" style={{color:"white", fontSize:"3rem", fontFamily:"arial", }}>Bienvenidos a la Tienda de DisclosurEinc </h1>
-           
+            <h1 classname="welcome-title" style={{color:"#8785a2", fontSize:"3rem", fontFamily:"arial"}}>Bienvenidos a la Tienda de DisclosurEinc </h1>
+          
             
             
            
           
         </div>
-        </Fragment>
+        </div>
     )
 }

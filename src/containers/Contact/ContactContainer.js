@@ -48,7 +48,9 @@ export default function Contact() {
                   <h1 style={{color:"#8785a2", fontFamily:"cursive"}}>Sobre Nosotros</h1><br></br>
                 <div >  
                   <div className="location-uno">    
-                      <p className="frase">Sucursall "Diclo"</p>
+                      <p className="frase">Sucursal
+
+                       "Diclo"</p>
                       <p className="frase">Caballito- CABA</p>
                       <p className="frase"> Envíos a todo el País</p>
                   </div> 
