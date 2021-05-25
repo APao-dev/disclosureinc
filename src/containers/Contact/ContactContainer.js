@@ -1,68 +1,104 @@
-import React from 'react';
+import React, { useState }  from 'react';
 // import { Link } from "react-router-dom";
+import db from '../../firebase/index';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import './Contact.css';
+import Swal from 'sweetalert2';
 
-import { useState } from "react";
 
-export default function ContactContainer() {
+export default function Contact() {
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
     
 
-            
-            const [buyer, setBuyer] = useState({ name: "", phone: "", email: "" });
-        
-            const handleInputChange = (e) => {
-                setBuyer({
-                  ...buyer,
-                  [e.target.name]: e.target.value,
-                });
-              };
-        
-
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if((name && email && message).trim() === ''){
+      Swal.fire({
+        icon:'question',
+        text:'Debes completar tu consulta'
+      });
+    }else{
+    db.collection('contacts').add({
+      name: name,
+      email: email,
+      message: message,
+      date: firebase.firestore.Timestamp.fromDate(new Date()),
+    }) 
+    .then(() => {
+      Swal.fire(
+        'Gracias por tu Consulta!',
+        'Te contactaremos a la brevedad',
+        'success');
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+    setName("");
+    setEmail("");
+    setMessage("");
+  }
+}
     return(
-        <div>
-            <h1>Sobre Nosotros</h1>
-            <h3>Para conocernos mejor puedes seguirnos en las redes</h3>
-            <p></p>
-           
-    {/* <div>
-        <Link to="/cart" >
-          <span>Ir al Carrito</span>
-         </Link>
-   </div> */}
+    <div className="container">
+              
+                  <h1 style={{color:"#8785a2", fontFamily:"cursive"}}>Sobre Nosotros</h1><br></br>
+                <div >  
+                  <div className="location-uno">    
+                      <p className="frase">Sucursall "Diclo"</p>
+                      <p className="frase">Caballito- CABA</p>
+                      <p className="frase"> Envíos a todo el País</p>
+                  </div> 
+                  <div className="location-dos">
+                      <p className="frase">Horario de Atención</p>
+                      <p className="frase">Lunes a Sábado</p>
+                      <p className="frase">9:00 a 18:00hs</p>
+                  </div>
+                </div>
 
-    <div>
-         <input
-          type="text"
-          name="name"
-          onChange={handleInputChange}
-          id="name"
-          placeholder=" "
-        />
-        <label htmlFor="name">Nombre</label>
+          <div>
+          
+              <form className="form" onSubmit={handleSubmit}>
+                <h3 className="contacto">Contacto <span>📩</span></h3>
+                
+                <label htmlFor="name">Nombre</label>
+                  <input className="form-contact__input"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    id="name"
+                    placeholder="Tu nombre"
+                  />
+                
+                  <label htmlFor="email">Email</label>
+                  <input
+                  className="form-contact__input"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    id="email"
+                    placeholder="Tu E-mail "
+                  />
+                  
+                  <label>Mensaje/Consulta</label>
+                  <textarea className="textarea" placeholder="Escribe tu consulta"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}></textarea>
+                  <button className="form-button" type="submit" >Enviar</button>
+              </form>
 
-        <input
-          type="text"
-          name="phone"
-          onChange={handleInputChange}
-          id="tel"
-          placeholder=" "
-        />
-        <label htmlFor="tel">Teléfono</label>
+              <h3>Para conocernos mejor puedes seguirnos en las redes</h3>
+              {/* ICONOS DE REDES */}
+          </div>
 
-        <input
-          type="email"
-          name="email"
-          onChange={handleInputChange}
-          id="email"
-          placeholder=" "
-        />
-        <label htmlFor="email">Email</label>
 
-{/* QUIERO PONER UN ONCLICK PARA "createOrder"  ¿¿??*/}
-
-    </div>
-
+         
     </div> 
+    
+    
 );
 }
        

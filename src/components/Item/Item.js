@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import img from '../../assets/img/sw6.jpeg';
+import imagen from '../../assets/img/products.jpeg';
 import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
@@ -38,14 +38,14 @@ export default function MediaCard({title, subtitle, description, image, category
       <CardActionArea>
         <CardMedia
           className={classes.media} 
-          image={img}
+          image={imagen}
          
 
         />
         <CardContent >
           <Typography gutterBottom variant="h5" component="h2">
             {category}
-           <p style={{fontSize:"25px", color:"plum", fontFamily:"cursive"}}>{title}</p>
+           <p style={{fontSize:"25px", color:"#ba135e95", fontFamily:"cursive"}}>{title}</p>
            <p style={{fontSize:"15px"}}>{subtitle}</p>           
            <p>$ {price}</p>
           </Typography>
@@ -58,9 +58,9 @@ export default function MediaCard({title, subtitle, description, image, category
 
       <CardActions>
         
-        <Button onClick={() => history.push(`/item/${id}`)} style={{padding:"14px", marginLeft:"23px", marginRight:"23px", color:"#ffc7c7", border:"#8785a2 solid 1px"}}>Ver más</Button>
+        <Button onClick={() => history.push(`/item/${id}`)} style={{padding:"14px", marginLeft:"23px", marginRight:"23px", color:"#ffc7c7", border:"solid 2px"}}>Ver más</Button>
        
-        <Button onClick={() => history.push(`/item/${id}`)} style={{padding:"14px", marginLeft:"23px", marginRight:"23px", color:"#ffc7c7", border:"#8785a2 solid 1px"}}>Comprar</Button>
+        <Button onClick={() => history.push(`/item/${id}`)} style={{padding:"14px", marginLeft:"23px", marginRight:"23px", color:"#ffc7c7", border:" solid 2px"}}>Comprar</Button>
       </CardActions>
       
     </Card>

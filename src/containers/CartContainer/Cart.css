@@ -1,5 +1,4 @@
 
-
 .message {
     color: rgba(80, 76, 73, 0.952);
     font-style: normal;
@@ -20,12 +19,28 @@
     justify-content: center;
     align-items: center;
 }
+.show-products{
+   
+    border: 0.2em solid #ba135e95;
+    margin: 0.4em;
+    border-radius: 4px;
+    align-items: center;
+
+}
+.items-bougth{
+    display: flex;
+    justify-content: center;
+    color: #ba135e95;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    align-items: center;
+}
 .form-buyer{
     display: flex;
     flex-direction: column;
     height: 20em;
     width: 20em;
-    border: 0.3em solid rgb(250, 142, 158);
+    border: 0.3em solid #8785a2;
     border-radius: 0.4em;
     padding: 2em;
     margin-bottom: 2em;
@@ -42,8 +57,8 @@
     margin-top: 10px;
     justify-content: center;
     align-items: center;
-    background-color: rgba(158, 218, 216, 0.748);
-    color: rgba(170, 73, 73, 0.954);
+    background-color: rgba(63, 162, 159, 0.878);
+    color: floralwhite;
     border-radius: 0.6em;
 }
 

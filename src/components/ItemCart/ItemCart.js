@@ -1,18 +1,24 @@
+import React from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
-import Button from '@material-ui/core/Button';
+import disclo from '../../assets/img/disclo.png';
 const ItemCart = ({ items, quantity }) => {
     const { removeItem } = useContext(CartContext);
 
 
     return(
         <div>
-            <h3>Producto: {items.title}</h3>
-          
-            <h2>Cantidad: {quantity}</h2>
-            <h2>Precio $ {items.price}</h2>
-
-            <Button className="btn delete-icon-btn"  onClick={() => removeItem(items.id)} style={{padding:"14px", color:"#8785a2", border:"#8785a2 solid 1px"}}> Eliminar producto</Button>
+            
+            <div className="show-products">
+                
+                <p className="items-bougth">Producto: {items.title}</p>
+            <img src={disclo} style={{display: "flex",
+    justifyContent: "center", alignItems:"center"}}></img>
+                <p className="items-bougth">Cantidad: {quantity}</p>
+                <p className="items-bougth">Precio $ {items.price}</p>
+                <button   onClick={() => removeItem(items.id)} style={{ color:"#ba135d", padding:"8px", border:"#ba135d solid 1px", borderRadius:"3px", backgroundColor:"floralwhite"}}> Eliminar producto</button>
+            </div>
+            
             
 
         </div>

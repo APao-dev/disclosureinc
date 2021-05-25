@@ -8,8 +8,8 @@ export default function ItemList({ItemData}) {
 
     return (
             
-        <Fragment>
-            <Grid container spacing={12} justify="center">
+        <Fragment className="itemlistcontainer">
+            <Grid container spacing={16} justify="center">
                 {
                     ItemData.map((post, index) => {
 

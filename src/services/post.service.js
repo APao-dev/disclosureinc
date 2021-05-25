@@ -2,6 +2,7 @@
 import db from '../firebase';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import Swal from 'sweetalert2';
 
 //Refactorizando el GET
 const itemCollection = db.collection('items');
@@ -34,7 +35,22 @@ export function createOrder(buyer, item, total) {
     })
    
     .then(function(newOrder) {
+        Swal.fire({
+            
+            icon: 'info',
+            title: `Gracias por tu compra `,
+            text: `Tu Número de orden es: ${newOrder.id}`,
+            
+            showClass: {
+              popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+              popup: 'animate__animated animate__fadeOutUp'
+            } 
+            
+          })
         return newOrder.id;
+       
     })
     .catch((err) => {});
 

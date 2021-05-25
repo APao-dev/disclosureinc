@@ -5,7 +5,10 @@ import ItemCart from '../../components/ItemCart/ItemCart';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import './Cart.css';
+import Swal from 'sweetalert2';
+
 const { createOrder } = require('../../services/post.service');
+
 
 
 export default function CartContainer() {
@@ -21,6 +24,8 @@ export default function CartContainer() {
         { name: "", 
         phone: "", 
         email: "" });
+
+        const {name, phone, email} = buyer;
         
        
     const handleInputChange = (e) => {
@@ -31,44 +36,50 @@ export default function CartContainer() {
       };   
 
       const handleOnSubmit = (e) => {
-        setBuyer({
-          ...buyer,
-          [e.target.name]: e.target.value,
-          
-        });
+        e.preventDefault();
+        if ((name && phone && email).trim() === ''){
+        //    return 
+           Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debes completar con los datos requeridos',
+          }); 
+        }else{
+        createOrder(buyer, cart, total);
+        Swal.fire({
+            
+            icon: 'success',
+            title: 'Tu pedido se ha realizado con éxito',
+            showConfirmButton: false,
+            // timer: 2000,
+             
+          })    
         
+        }
       };  
       
-      
-// function createOrder() {
-//         if(buyer.trim() === ""){
-//          alert('Debes completar los datos requeridos');   
-//         }else{
-//             alert('Tu pedido se ha realizado con éxito')
-//         }
-            
-//     }
 
          
 
     return(
         <div className="container">
-            {/* <h2>Hola desde Cart ...este es tu carrito</h2> */}
+            <h2 style={{color:"#8785a2", fontFamily:"cursive"}}>Hola desde Cart ...este es tu carrito</h2>
             <div>
                 {cart.lenght === 0 ? (
-                    <h4 className="message">Disculpa, pero no has seleccionado ningún producto</h4>
+                    alert("Disculpa, pero no has seleccionado ningún producto")
                 ) : (
                     cart.map((item, key) => 
                     <ItemCart key={key} {...item}/>)
                     )}
+                    
                     <div>
-                        <h3>TOTAL A PAGAR $ {total}</h3>
+                        <h3 style={{color:"#8785a2", fontFamily:"arial"}}>TOTAL A PAGAR $ {total}</h3>
                     </div>
-                    <Button onClick={() =>clear()} style={{  border: "solid",  color:"rgb(181, 89, 103)", margin: "10px"}}>Vaciar Carrito</Button> 
+                    <Button onClick={() =>clear()} style={{  border: "solid",  color:"#8785a2", margin: "10px"}}>Vaciar Carrito</Button> 
 
                     <Link to="/posts" style={{textDecoration:"none"}}>
 
-                    <Button style={{  border: "solid",  color:"rgba(228, 142, 66, 0.94)", textDecoration: "none"}}>
+                    <Button style={{  border: "solid",  color:"#8785a2", textDecoration: "none"}}>
                         Volver a la lista
                     </Button>
                     </Link> 
@@ -105,7 +116,7 @@ export default function CartContainer() {
                     id="email"
                     placeholder="Email"
                     />
-                    <button className="form-button" onClick={() => createOrder(buyer, cart, total)}>
+                    <button className="form-button"  type="submit">
                 Confirmar Pedido
                 </button>
                 </form>
