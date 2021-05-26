@@ -1,17 +1,4 @@
-/* 
-.message {
-    color: rgba(80, 76, 73, 0.952);
-    font-style: normal;
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    margin: 5rem;
-  } */
 
-/* .message-card {
-    border: none;
-    padding: 2.5rem;
-    } */
 .container{
     padding: 4em;
     display: flex;
