@@ -18,14 +18,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
 .show-products{
    
     border: 0.2em solid #ba135e95;
-    margin: 0.4em;
+    margin: 0.6em;
     border-radius: 4px;
-    align-items: center;
+    text-align: center;
 
+}
+.show-products img{
+    text-align: center;
+    border-radius: 6px;
+    border: solid #8785a2 1px;
 }
 .items-bougth{
     display: flex;

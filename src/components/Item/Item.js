@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import imagen from '../../assets/img/products.jpeg';
+// import imagen from '../../assets/img/products.jpeg';
 import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
@@ -17,10 +17,11 @@ const useStyles = makeStyles({
        
   },
   media: {
-    width: 250,  
+    width: 280,  
     height: 300,
     padding: 20,
     margin: 10,
+    borderRadius: 4,
    
   },
 });
@@ -38,7 +39,7 @@ export default function MediaCard({title, subtitle, description, image, category
       <CardActionArea>
         <CardMedia
           className={classes.media} 
-          image={imagen}
+          image={image}
          
 
         />

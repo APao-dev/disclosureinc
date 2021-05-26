@@ -73,7 +73,7 @@ export default function CartContainer() {
                     )}
                     
                     <div>
-                        <h3 style={{color:"rgba(63, 162, 159, 0.878)", fontFamily:"arial"}}>TOTAL A PAGAR $ {total}</h3>
+                        <h3 style={{color:"rgba(63, 162, 159, 0.878)", fontFamily:"arial", margin:"6px", textAlign:"center"}}>TOTAL A PAGAR $ {total}</h3>
                     </div>
                     <Button onClick={() =>clear()} style={{  border: "solid",  color:"#8785a2", margin: "10px"}}>Vaciar Carrito</Button> 
 
