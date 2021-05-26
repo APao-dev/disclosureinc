@@ -1,4 +1,4 @@
-
+/* 
 .message {
     color: rgba(80, 76, 73, 0.952);
     font-style: normal;
@@ -6,12 +6,12 @@
     font-weight: bold;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     margin: 5rem;
-  }
+  } */
 
-.message-card {
+/* .message-card {
     border: none;
     padding: 2.5rem;
-    }
+    } */
 .container{
     padding: 4em;
     display: flex;
@@ -38,12 +38,12 @@
 .form-buyer{
     display: flex;
     flex-direction: column;
-    height: 20em;
-    width: 20em;
+    height: 24em;
+    width: 24em;
     border: 0.3em solid #8785a2;
     border-radius: 0.4em;
     padding: 2em;
-    margin-bottom: 2em;
+    margin: 2.4em;
    
 }    
 .form-buyer__input{
@@ -52,19 +52,17 @@
 
 }
 
-.form-button{
-    padding: 0.8em;
-    margin-top: 10px;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(63, 162, 159, 0.878);
+.button-cart{
     color: floralwhite;
-    border-radius: 0.6em;
+    background-color: rgba(63, 162, 159, 0.878);
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 6px;
+
 }
 
 .button-clear{
     border: 0.6em solid rgba(228, 142, 66, 0.94); 
     padding: 1em;
-    text-decoration: none
-    ;
+    text-decoration: none;
 }

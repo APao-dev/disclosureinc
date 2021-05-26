@@ -64,28 +64,10 @@ export default function ButtonAppBar() {
 
           <CartWidget/>
          
-         
-          {/* <div> */}
-        {/* <Button className="boton-menu" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} style={{padding:'20px'}}>
-        Open Menu
-        </Button> */}
-      
-          {/* <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}>  */}
-      
-      {/* <MenuItem onClick={() => history.push("/posts")}>Catálogo</MenuItem> */}
-      {/* <MenuItem onClick={() => history.push("/contact")}>Sobre Nosotros</MenuItem></Menu> */}
-         
-    {/* </div> */}
     <Link className="title-disclo"
             to="/contact" style={{margin:"20px"}}>NOSOTROS</Link> 
     
-    <Link className="title-disclo"
-            to="/login" >LOGIN</Link> 
+   
           
         </Toolbar>
       </AppBar>

@@ -9,7 +9,7 @@ import HomePageContainer from '../homePage/HomePageContainer';
 import ContactContainer from '../Contact/ContactContainer';
 import CartContainer from '../CartContainer/CartContainer';
 import Login from '../../components/Login/Login';
-
+import Footer from '../../components/Footer/Footer';
 
 function App() {
 
@@ -51,6 +51,7 @@ function App() {
          </Route>
 
        </Switch>
+       <Footer/>
        </Router>
        
 

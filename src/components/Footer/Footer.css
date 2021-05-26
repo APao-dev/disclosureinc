@@ -1,0 +1,62 @@
+.footer{
+    margin-top: 60px;
+   /* background-color: #8785a2; */
+   background-image: linear-gradient(to left, #1cb8a198,#f9aaaa, #c1276770);
+    width: 100%;
+}
+.footer-center{
+    display: flex;
+    justify-content: space-between;
+}
+a.footer-link{
+    text-decoration: none;
+    color: floralwhite;
+    font-size: 24px;
+    margin-left: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+
+a.footer-link:hover{
+    color: #ba135e95;
+    font-size: 26px;
+
+}
+.left-foot{
+    float: left;
+    margin: 10px;
+  
+}
+.right-foot{
+   margin-right: 30px; 
+   
+}
+.right-foot h2{   
+   color: floralwhite; 
+   font-size: 20px; 
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+}
+
+.right-foot a{
+    margin: 13px;   
+    font-size: 30px;
+    color: floralwhite;   
+}
+.right-foot a:hover{
+    color: #ba135e95;
+
+}
+.footer-copyright {
+   margin: 10px ;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+.copyright {
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+
+}

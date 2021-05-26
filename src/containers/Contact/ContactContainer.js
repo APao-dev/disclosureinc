@@ -50,7 +50,7 @@ export default function Contact() {
                   <div className="location-uno">    
                       <p className="frase">Sucursal
 
-                       "Diclo"</p>
+                       "Disclo"</p>
                       <p className="frase">Caballito- CABA</p>
                       <p className="frase"> Envíos a todo el País</p>
                   </div> 
@@ -85,15 +85,14 @@ export default function Contact() {
                     placeholder="Tu E-mail "
                   />
                   
-                  <label>Mensaje/Consulta</label>
+                  <label >Mensaje/Consulta</label>
                   <textarea className="textarea" placeholder="Escribe tu consulta"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}></textarea>
                   <button className="form-button" type="submit" >Enviar</button>
               </form>
 
-              <h3>Para conocernos mejor puedes seguirnos en las redes</h3>
-              {/* ICONOS DE REDES */}
+              
           </div>
 
 

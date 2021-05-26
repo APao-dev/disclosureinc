@@ -73,7 +73,7 @@ export default function CartContainer() {
                     )}
                     
                     <div>
-                        <h3 style={{color:"#8785a2", fontFamily:"arial"}}>TOTAL A PAGAR $ {total}</h3>
+                        <h3 style={{color:"rgba(63, 162, 159, 0.878)", fontFamily:"arial"}}>TOTAL A PAGAR $ {total}</h3>
                     </div>
                     <Button onClick={() =>clear()} style={{  border: "solid",  color:"#8785a2", margin: "10px"}}>Vaciar Carrito</Button> 
 
@@ -116,7 +116,7 @@ export default function CartContainer() {
                     id="email"
                     placeholder="Email"
                     />
-                    <button className="form-button"  type="submit">
+                    <button className="button-cart"  type="submit">
                 Confirmar Pedido
                 </button>
                 </form>
