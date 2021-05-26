@@ -52,6 +52,7 @@ Paola Fernandez
 ### Curso CoderHouse
 
 Profesor: Luciano Calderon
+
 Tutor: Alejandro Saez 
 
 ## Aprende más sobre React   <img src="src/assets/img/react.png" width="100">
