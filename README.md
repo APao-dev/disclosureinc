@@ -28,6 +28,7 @@ La aplicación se recargará automáticamente si se cambia alguno de los archivo
 DisclosueInc nace desde un emprendimiento de indumentaria el cual pretende ser creativo, 
 de fácil acceso y, sobre todo, seguro para las compras on-Line 
 
+En el siguiente [Link](https://www.youtube.com/watch?v=LRFB8Bn9zAg) podrás ver un video con las funcionalidades
 ## Formato y navegación 🛰
 
 Cuenta con un Navbar principal en donde da acceso a las diversas rutas, 
