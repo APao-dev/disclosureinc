@@ -16,7 +16,7 @@ const ItemCart = ({ items, quantity }) => {
                 <p className="items-bougth">Cantidad: {quantity}</p>
                 <p className="items-bougth">Precio $ {items.price}</p>
                 
-                <button   onClick={() => removeItem(items.id)} style={{ color:"#ba135d", padding:"8px", border:"#ba135d solid 1px", borderRadius:"3px", backgroundColor:"floralwhite", alignItems:"center", marginBottom:"3px"}}> Eliminar producto</button>
+                <button   onClick={() => removeItem(items.id)} style={{ color:"#ba135d", padding:"8px", border:"#ba135d solid 1px", borderRadius:"3px", backgroundColor:"floralwhite", alignItems:"center", marginBottom:"4px", fontSize:'15px'}}> Eliminar producto</button>
             </div>           
 
         </div>
