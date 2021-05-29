@@ -33,8 +33,8 @@ useEffect(() => {
 
     return( 
     
-       <div className="container"><h2>Descripción del producto</h2>
-            <div style={{display: "flex", flexDirection:"column", justifyContent: 'center', alignItems:"center",  width:500, border:"solid", color:"white", marginBottom:"20px", padding:"2.4em", marginRight:"1em", textAlign:"center"}}>
+       <div className="container"><h2 style={{color:"#8785a2", fontFamily:"cursive"}}>Descripción del producto</h2>
+            <div style={{display: "flex", flexDirection:"column", justifyContent: 'center', alignItems:"center",  width:500, border:"solid", color:"white", margin:"20px 20px", padding:"2.4em", marginRight:"1em", textAlign:"center"}}>
                         
                 <div  key={item.id}>  
                 <img src={item.image} alt={item.image} style={{width:"250px", height:"200px", border:"solid 1px", color:"#8785a2", borderRadius:"3px"}}></img>

@@ -1,12 +1,7 @@
 
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-
-// Para la lista desplegable con las opciones
+import {AppBar, Toolbar, Typography, makeStyles, Hidden, Drawer }from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import CartWidget from '../CartWidget/CartWidget'
@@ -14,12 +9,15 @@ import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
 import './NavBar.css'
+import { IconButton } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
+  offset: theme.mixins.toolbar,
+  // root: {
+  //   flexGrow: 1,
+   
+  // },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -33,8 +31,9 @@ export default function ButtonAppBar() {
   const history =useHistory();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
+  const open = Boolean(anchorEl);
+  
+  const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -44,33 +43,76 @@ export default function ButtonAppBar() {
 
 
   return (
-    
-    <div className={classes.root} >
-     
-      <AppBar position="static" >
-        
+    <div>
+      <AppBar>
         <Toolbar className="navbar-style">
-          
+
+        <Hidden only={['lg', 'md']}> 
+        
+          <IconButton 
+          color="inherit" 
+          aria-label="menu" 
+          className={classes.menuButton}
+          onClick={handleMenu}>
+            <MenuIcon/>
+          </IconButton>
+          <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem  onClick={() => history.push('/posts/sweaters')}>Sweaters</MenuItem>
+                <MenuItem onClick={() => history.push('/posts/calzado')}>Calzado</MenuItem>
+                <MenuItem onClick={() => history.push('/posts/accesorios')}>Accesorios</MenuItem>
+                <MenuItem onClick={() => history.push('/contact')}>Nosotros</MenuItem>
+              </Menu>
                 
-          <Typography variant="h3" className={classes.title} >
-            <Link to="/" className="title-disclo">DisclosureInc</Link>
-          </Typography>
+        </Hidden>
 
-          <div className={classes.categories}>
-    <Button onClick={() => history.push('/posts/sweaters')} color="inherit"  style={{padding:'30px'}}>Sweaters</Button>
-    <Button onClick={() => history.push('/posts/calzado')} color="inherit" style={{padding:'30px'}}>Calzado</Button>
-    <Button onClick={() => history.push('/posts/accesorios')} color="inherit"  style={{padding:'30px'}}>Accesorios</Button>
-  </div>
 
-          <CartWidget/>
-         
-    <Link className="title-disclo"
-            to="/contact" style={{margin:"20px"}}>NOSOTROS</Link> 
-    
-   
-          
+          <Typography variant="h3" className={classes.title}>
+          <Link to="/" className="title-disclo">DisclosureInc</Link>
+         </Typography>
+
+
+        <div className={classes.categories}>
+          <Hidden only={['xs', 'sm']}>
+            <Link className="link-nav" onClick={() => history.push('/posts/sweaters')} color="inherit"  style={{padding:'30px'}}>Sweaters</Link>
+            </Hidden>
+            <Hidden only={['xs', 'sm']}>
+            <Link className="link-nav" onClick={() => history.push('/posts/calzado')} color="inherit" style={{padding:'30px'}}>Calzado</Link>
+            </Hidden>
+            <Hidden only={['xs', 'sm']}>
+            <Link className="link-nav" onClick={() => history.push('/posts/accesorios')} color="inherit"  style={{padding:'30px'}}>Accesorios</Link>
+          </Hidden>
+      </div>
+
+
+        <Hidden xsDown>
+          <Link className="title-disclo"
+          to="/contact" style={{margin:"20px"}}>NOSOTROS</Link> 
+        </Hidden>
+
+         <CartWidget/>
+
         </Toolbar>
       </AppBar>
+      <div className={classes.offset}></div>
     </div>
-  );
+    
+  )
   }
+
+
+    
+  

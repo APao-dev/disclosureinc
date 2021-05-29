@@ -21,9 +21,7 @@ export default function ItemListContainer() {
 
     return(
         <div>
-            <div>
-                <Link to='/posts'></Link>
-            </div>
+           
             
                <div style={{display: "flex"}}>
                     <ItemList ItemData={item}/>
